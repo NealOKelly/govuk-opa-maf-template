@@ -1,0 +1,9 @@
+<div class="control">
+    #if(${control.getUrl()})
+        #set($src = ${control.getUrl()})
+    #else
+        #set($src = "data:${image-control-formatter.getImageMimeType(${control.getFileName()})};base64,${image-control-formatter.formatImageControlAsBase64(${control.getFileName()})}")
+    #end
+
+    <img src="$src" alt="${control.getText()}"/>
+</div>

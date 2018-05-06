@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf-config xmlns="http://xmlns.oracle.com/adf/mf/config">
+  <skin-family>govuk</skin-family>
+  <skin-version>v1</skin-version>
+  <fullscreenLayout>fullscreen</fullscreenLayout>
+</adfmf-config>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<maf-plugins xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/adf/mf">
+  <cordova-plugins>
+    <core-cordova-plugin id="c1" pluginId="maf-cordova-plugin-network-access"/>
+    <core-cordova-plugin id="c2" pluginId="cordova-plugin-camera"/>
+    <core-cordova-plugin id="c3" pluginId="cordova-plugin-geolocation"/>
+    <cordova-plugin id="c4" pluginId="cordova-plugin-inappbrowser" path="../../CordovaPlugins/cordova-plugin-inappbrowser-rel-1.7.1/" windows-run-in-core-window="disabled">
+      <platform id="p1" name="android" enabled="true"/>
+      <platform id="p2" name="ios" enabled="true"/>
+      <platform id="p3" name="windows" enabled="true"/>
+    </cordova-plugin>
+  </cordova-plugins>
+</maf-plugins>

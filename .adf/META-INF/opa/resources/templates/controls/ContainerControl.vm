@@ -1,0 +1,48 @@
+#parse( "investigation/controlMessages.vm" )
+#set($controls = ${control.getControls()} )
+
+#if(${control.getProperty("Device","none")} == "GPS")
+    #foreach( $childControl in $controls )
+        #if(${childControl.getProperty("Device","none")} == "GPSLatitude")
+            #set($latControl = $childControl)
+        #elseif(${childControl.getProperty("Device","none")} == "GPSLongitude")
+            #set($lonControl = $childControl)
+        #end
+    #end
+    <div class="control">
+    <div class="select-style-gps" style="max-width:${latControl.getInnerWidth()}">
+    <input type="text" id="${latControl.getEncodedID()}" name="${latControl.getId()}" readonly value="${latControl.getDisplayValue()}" tabindex="#tabIndex()" class="owd-input">
+    </div>
+    <div class="select-style-gps" style="max-width:${lonControl.getInnerWidth()}">
+    <input type="text" id="${lonControl.getEncodedID()}" name="${lonControl.getId()}" readonly value="${lonControl.getDisplayValue()}" tabindex="#tabIndex()" class="owd-input">
+    </div>
+    <button onclick="populateCoordinates('${latControl.getEncodedID()}', '${lonControl.getEncodedID()}'); return false;" type="button">Get Coordinates</button>
+    <button onclick="clearCoordinates('${latControl.getEncodedID()}', '${lonControl.getEncodedID()}'); return false;" type="button">Clear</button>
+    </div>
+#else
+    #foreach( $control in $controls )
+            #if(!$control.isAlwaysHidden())
+                    #if(!${control.isVisible()})
+                            #set($displayStyle = "display: none" )
+                    #else
+                            #set($displayStyle = "")
+                    #end
+                    #if (${control.getParent().isHorizontalLayout()})
+                            #set($wrapClass = "opm-wrap")
+                    #else
+                            #set($wrapClass = "")
+                    #end
+    
+                    #if( $control.getControlType() != "EntityInstanceCollectGroup")
+                            <div id="cd-${control.getEncodedID()}" class="${control.getOuterStyle()} ${wrapClass}" style="width:100%; max-width:${control.getOuterWidth()}; $displayStyle">
+                    #end
+                    
+                    #parseCtrlVm(${control})
+        
+                    #if( $control.getControlType() != "EntityInstanceCollectGroup")
+                    </div>
+                    #end
+            #end
+    #end
+    <div class="clear"></div>
+#end    

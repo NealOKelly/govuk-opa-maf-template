@@ -1,0 +1,24 @@
+#parse( "investigation/controlMessages.vm" )
+<div class="question"><label for="${control.getEncodedID()}">${control.getText()}</label></div>
+
+<div class="control">
+    <div id="existing_images_${control.getEncodedID()}" class="existing-image-attachments">
+        #foreach( $attach in ${control.getAttachments()} )
+            <div id="existing_image_${attach.getId()}" class="existing-image-attachment">
+                    <input type="hidden" name="${attach.getId()}" value="0"/>
+                    <img style="max-height:70px;max-width:140px" src="${attachments-path}/${attach.getFileName()}" />
+                    <a class="linkRemoveUploadedImage" onclick="removeAttachedPicture('${attach.getId()}'); return false;"></a>
+            </div>
+        #end
+    </div>    
+    
+    <div id="new_images_${control.getId()}" class="new-image-attachments">
+            
+    </div>
+    
+    <div>
+        <span style="margin-top: 20px">Add image from:</span>
+        <button class="buttonCamera" onclick="getPicture('${control.getId()}', true); return false;" type="button">Camera</button>
+        <button class="buttonGallery" onclick="getPicture('${control.getId()}', false); return false;" type="button">Gallery</button>
+    </div>
+</div>

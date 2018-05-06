@@ -1,0 +1,103 @@
+<div class="relationship-control">
+    #if( $control.isReadOnly() )
+        #set( $readOnlyString = "readonly" )
+        #set( $disabledString = "disabled" )
+    #else
+        #set( $readOnlyString = "" )
+        #set( $disabledString = "" )
+    #end
+
+    #if(${control.isInvalid()})
+        #set( $invalidState = "true")
+    #else
+        #set( $invalidState = "false")
+    #end
+
+    <div class="question ${attrLabelClasses}">
+        <label for="${control.getEncodedID()}" id="lbl-${control.getEncodedID()}">${control.getText()}</label>
+        #if(${mandatory-icon})
+            #if(!${control.isMandatory()})
+                #set($displayStyle = "display: none" )
+            #else
+                #set($displayStyle = "")
+            #end
+            #if(${mandatory-icon-external} == "true")
+                <img class="mandatory" src="${mandatory-icon}" alt="${mandatory-icon-alt-text}" style="$displayStyle"/>
+            #else
+                <img class="mandatory" src="${resources-root}/images/${mandatory-icon}" style="$displayStyle"
+                     alt="${mandatory-icon-alt-text}"/>
+            #end
+        #end
+    </div>
+	<div class="control">
+    #set ($options = ${control.getOptions()})
+    ## render the relationship target entities selection controls.
+    #if(${control.getDisplayStyle()} == "checkbox")
+        <div class="relationship-targets">
+            #foreach( $option in ${options} )
+                #if(${option.isSelected()})
+                    #set($checkedString = "checked")
+                #else
+                    #set($checkedString = "")
+                #end
+                <div class="control-checkbox">
+                    <input class="owd-input" type="checkbox" name="${option.getId()}" id="${option.getId()}" value="${option.getId()}"
+                        aria-labelledBy="lbl-${control.getEncodedID()} lbl-${option.getId()}"
+                        aria-describedBy="msg-${option.getId()}"
+                        aria-invalid="$invalidState"
+                        ${checkedString} $disabledString/>
+                    <label for="${option.getId()}" id="lbl-${option.getId()}"><span></span>${option.getDisplayValue()}</label>
+                </div>
+            #end
+        </div>
+    #elseif(${control.getDisplayStyle()} == "Radiobutton")
+        <div class="relationship-targets">
+            #foreach( $option in ${options} )
+                #if(${option.isSelected()})
+                    #set($checkedString = "checked")
+                #else
+                    #set($checkedString = "")
+                #end
+                <div class="opm-relationship-radio">
+                    <input class="owd-input" type="radio" name="${control.getId()}" id="${option.getId()}" value="${option.getId()}"
+                        aria-labelledBy="lbl-${control.getEncodedID()} lbl-${option.getId()}"
+                        aria-describedBy="msg-${option.getId()}"
+                        aria-invalid="$invalidState"
+                        ${checkedString} $disabledString />
+                    <label for="${option.getId()}" id="lbl-${option.getId()}"><span></span>${option.getDisplayValue()}</label>
+                </div>
+            #end
+        </div>
+    #else
+            #if(${control.getDisplayStyle().equals("Listbox")})
+                #set($size = ${options.size()} + 1)
+                #if (${size} == 1) #set($size=2) #end
+            #else
+                #set($size = 1)
+            #end
+
+            <div class="relationship-targets select-style-dropdown" style="max-width:${control.getInnerWidth()}">
+            <select class="owd-input" id="${control.getEncodedID()}" size="$size" name="${control.getId()}" style="max-width:${control.getInnerWidth()}"
+                aria-labelledBy="lbl-${control.getEncodedID()}"
+                aria-describedBy="msg-${option.getId()}"
+                aria-invalid="$invalidState"
+                $disabledString>
+                #if(!${control.getDisplayValue()})
+                    <option selected value=""></option>
+                #else
+                    <option value=""></option>
+                #end
+                #foreach( $option in ${options} )
+                    #if( ${option.isSelected()} )
+                        <option selected value="${option.getId()}">${option.getDisplayValue()}</option>
+                    #else
+                        <option value="${option.getId()}">${option.getDisplayValue()}</option>
+                    #end
+                #end
+            </select>
+        </div>
+    #end
+    </div>
+</div>
+
+#parse( "investigation/controlMessages.vm" )

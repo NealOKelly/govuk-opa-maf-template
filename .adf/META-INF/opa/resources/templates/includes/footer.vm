@@ -1,0 +1,9 @@
+## Standard header
+## HTML Comments should be commented out when not debugging
+## <!-- begin footer -->
+#if( ${hide-footer} != "true" && ${hide-footer} != "True")
+<div id="footer">
+    <div class="left">$!{footer-left-text}</div>
+    <div class="right">$!{footer-right-text}</div>
+</div>
+#end

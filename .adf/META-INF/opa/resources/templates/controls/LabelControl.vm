@@ -1,0 +1,8 @@
+## the variable 'labelControl' is available in scope, and is set to the LabelInterviewControl object to be rendered
+#parse( "investigation/controlMessages.vm" )
+
+#if(${control.hasCustomRender()})
+    ${control.getCustomRenderHTML()}
+#else
+    <div id="${control.getEncodedID()}" class="owd-input ${control.getTextStyle()}">${control.getText()}</div>
+#end

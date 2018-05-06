@@ -1,0 +1,52 @@
+## This template expects a variable named $control to be in context
+## This recursive function renders a node and its children
+#macro( renderNode $nodeControl)
+    ## Render the node only if it is visible
+    #if ($nodeControl.isVisible() )
+        #foreach($childNode in ${nodeControl.getControls()})
+            #if(${childNode.isLeaf()})
+                <li class="leaf" id="${childNode.getEncodedID()}" name="${childNode.getEncodedID()}">
+                    <a class="explanation-node-text" href="#${childNode.getEncodedID()}">${childNode.getText()}</a>
+                </li>
+            #else
+                #if(${childNode.isAlreadyProven()})
+                    <li class="leaf" id="${childNode.getEncodedID()}" name="${childNode.getId()}">
+                        <a class="explanation-node-text" href="#${childNode.getEncodedID()}">${childNode.getText()}</a>&nbsp;<a class="explanation-proven-ref" href="#${childNode.getEncodedRefId()}">${decision-report-already-proven}</a>
+                    </li>
+                #else
+                    <li class="expanded" id="${childNode.getEncodedID()}" name="${childNode.getId()}">
+                        <a class="explanation-node-text" href="#${childNode.getEncodedID()}">${childNode.getText()}</a>
+                        <ul class="explanation-node-content">
+                            ##recurse through to add the children of this node
+                            #renderNode($childNode)
+                        </ul>
+                     </li>
+                #end
+            #end
+        #end
+    #end
+#end
+
+#if (${control.getControls().size()} > 0 && ${control.getControls().get(0).getControls().size()} > 0)
+	#set($hasDetails = "true")
+#end
+
+<div class="explanation">
+    <div id="${control.getEncodedID()}" class="explanation_caption">
+        #if($hasDetails)
+            <a class="explanation-node-text" href="#${control.getEncodedID()}">${control.Text}</a>
+        #else
+            ${control.Text}
+        #end
+    </div>
+    #if($hasDetails)
+        <div class="explanation_details">
+            <ul class="decisionreport">
+                #foreach($n in ${control.getControls()})
+                    #renderNode($n)
+                #end
+            </ul>
+        </div>
+    #end
+</div>
+

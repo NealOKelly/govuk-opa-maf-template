@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf-skins xmlns="http://xmlns.oracle.com/adf/mf/skin">
+<!--
+     Note : * It is very important to follow the syntax listed below while creating the <id> entry within <skin> entry.
+            * It is very important to add version within each <id> entry of every <skin> entry
+            * Adding platform information is optional. You add platform information to limit the scope of the skin
+              only to that specific platform.
+            * Adding the model of the device is optional. You add the model information to limit the scope of the skin
+              only to the specific device model.
+
+     To build a skin for a specific platform like iOS or Android , you need to follow the syntax listed below to create the '<id>' for a skin 
+     Format      : family-version.platform
+
+     Example1     : customFamily1-v1.iOS
+     Description : The example listed above signifies version1 (v1) of customFamily1 (a unique family name)
+                   which is applicable ONLY to the iOS platform. 
+
+     Example2     : customFamily1-v1.Android
+     Description : The example listed above signifies version1 (v1) of customFamily1 (a unique family name)
+                   which is applicable ONLY to the Android platform. 
+
+
+     To build a skin for a specific device model, you need to follow the syntax listed below
+     Format      : family-version.model
+
+     Example1     : customFamily1-v1.iPhone iPhone6,1
+     Description : The example listed above signifies version1 (v1) of customFamily1 (a unique family name)
+                   which is applicable ONLY to the iPhone 5s device (which has model number 'iPhone iPhone6,1'). 
+     
+     Example2     : customFamily1-v1.Nexus 7
+     Description : The example listed above signifies version1 (v1) of customFamily1 (a unique family name)
+                   which is applicable ONLY to the Nexus 7 device (which has model number 'Nexus 7'). 
+
+
+    The next two <skin> entries represent two different versions (v1 and v2) of a custom skin family (customFamily1)
+    which extends version v1.6 of mobileAlta skin family. In this example, v2 version extends v1.
+-->
+
+    <!--
+          Version1 (v1) of custom skin family (customFamily1)
+    -->
+    <skin id="id1">
+        <id>govuk-v1</id>
+        <family>govuk</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/govuk-v1.css</style-sheet-name>
+        <version>
+            <name>v1</name>
+        </version>
+    </skin>
+    <!--
+          Version2 (v2) of custom skin family (customFamily1). 
+          v2 extends v1 
+    -->
+    <skin id="id2">
+        <id>govuk-v2</id>
+        <family>govuk</family>
+        <extends>govuk-v1</extends>
+        <style-sheet-name>css/govuk-v2.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+            <default>true</default>
+        </version>
+    </skin>    
+<!--
+    The next <skin> entry represents version2 (v2) of a custom skin family (customFamily1), 
+    which extends version 1.6 (v1.6) of skin family (mobileAlta) , and is applicable to iOS platform only.
+-->
+    <skin id="id3">
+        <id>customFamily1-v2.iOS</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/myiOS.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+        </version>
+    </skin>
+<!--
+    The next <skin> entry represents version2 (v2) of a custom skin family (customFamily1), 
+    which extends version1.6 (v1.6) of skin family (mobileAlta) , and is applicable to 'iPad air' (iPad 4th generation) device only.
+-->
+    <skin id="id6">
+        <id>customFamily1-v2.iPad iPad4,1</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/myiPad.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+        </version>
+    </skin>
+<!--
+    The next <skin> entry represents version2 (v2) of a custom skin family (customFamily1), 
+    which extends version1.6 (v1.6) of skin family (mobileAlta) , and is applicable to 'iPhone 5s' device only.
+-->
+    <skin id="id7">
+        <id>customFamily1-v2.iPhone iPhone6,1</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/myiPhone.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+        </version>
+    </skin>
+<!--
+    The next <skin> entry represents version2 (v2) of a custom skin family (customFamily1), 
+    which extends version1.6 (v1.6) of skin family (mobileAlta) , and is applicable to Android platform only.
+-->
+  <skin id="id8">
+        <id>customFamily1-v2.Android</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/allAndroidDevices.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+        </version>
+    </skin>
+<!--
+    The next <skin> entry represents version2 (v2) of a custom skin family (customFamily1), 
+    which extends version1.6 (v1.6) of skin family (mobileAlta) , and is applicable to 'Nexus 7' device only.
+-->
+  <skin id="id9">
+        <id>customFamily1-v2.Nexus 7</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/nexus7.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+        </version>
+    </skin>
+<!--
+    The next <skin> entry represents version2 (v2) of a custom skin family (customFamily1), 
+    which extends version1.6 (v1.6) of skin family (mobileAlta) , and is applicable to 'Samsung Galaxy S3' device only.
+-->
+  <skin id="id10">
+        <id>customFamily1-v2.SAMSUNG-SGH-I747</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/samsungGalaxyS3.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+        </version>
+    </skin> 
+<!--
+    The next <skin> entry represents version1 (v1) of a custom skin family (customFamily1), 
+    which extends version1.6 (v1.6) of skin family (mobileAlta) , and is applicable to Windows platform only.
+-->
+  <skin id="id11">
+        <id>customFamily1-v1.UWP</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/windows-customFamily1.css</style-sheet-name>
+        <version>
+            <name>v1</name>
+        </version>
+    </skin>
+
+<!--
+    The next <skin> entry represents version2 (v2) of a custom skin family (customFamily1), 
+    which extends version1.6 (v1.6) of skin family (mobileAlta) , and is applicable to Windows platform only.
+-->
+  <skin id="id12">
+        <id>customFamily1-v2.UWP</id>
+        <family>customFamily1</family>
+        <extends>mobileAlta-v1.6</extends>
+        <style-sheet-name>css/windows-customFamily2.css</style-sheet-name>
+        <version>
+            <name>v2</name>
+        </version>
+    </skin>
+
+</adfmf-skins>

@@ -1,0 +1,46 @@
+<!--   START STATIC CONTENT  -->
+#if( ${pagedir-right-to-left} == "true" || ${pagedir-right-to-left} == "True" )
+    #set($pagedirString = "rtl")
+#else
+    #set($pagedirString = "ltr")
+#end
+
+<div id="stylesheets">
+    <link rel="stylesheet" type="text/css" href="${static-resources-root}/august2016/glyphicons.css">
+
+    <link rel="stylesheet" type="text/css" href="${static-resources-root}/august2016/main.css">
+
+    #if($pagedirString == "rtl")
+        <link rel="stylesheet" type="text/css" href="${static-resources-root}/august2016/right-to-left.css">
+    #end
+
+    ## Not loading standard OWD extra css
+    ##foreach($stylesheet in ${extra-css-files})
+        ##<link rel="stylesheet" type="text/css" href="${resources-root}/$stylesheet">
+        ##<link rel="stylesheet" type="text/css" href="${static-resources-root}/$stylesheet">
+    ##end
+    
+    <!--<link rel="stylesheet" href="${static-resources-root}/jquery.signaturepad.css">-->
+
+</div>
+
+<script src="${static-resources-root}/august2016/OPAControlStateEvaluator.js"></script>
+<script src="${static-resources-root}/august2016/interview.js"></script>
+
+<script src="${static-resources-root}/august2016/flashcanvas.js"></script>
+<script src="${static-resources-root}/august2016/json2.min.js"></script>
+<script src="${static-resources-root}/august2016/jquery.signaturepad.min.js"></script>
+
+<script>
+    //variable for explanation utils
+    var explanationParams = {
+        captionCollapseImage: "${encoder.jsVarEncode("${images-base-path}${explanation-caption-collapse-image}")}",
+        captionExpandImage: "${encoder.jsVarEncode("${images-base-path}${explanation-caption-expand-image}")}",
+        nodeExpandImage: "${encoder.jsVarEncode("${images-base-path}${explanation-expand-image}")}",
+        nodeExpandAlt: "${encoder.jsVarEncode(${tree-expand-alt})}",
+        nodeCollapseImage:  "${encoder.jsVarEncode("${images-base-path}${explanation-collapse-image}")}",
+        nodeCollapseAlt: "${encoder.jsVarEncode(${tree-collapse-alt})}"
+    };
+</script>
+
+<!--  END STATIC CONTENT  -->

@@ -1,0 +1,8 @@
+    #parse( "investigation/controlMessages.vm" )
+    ##open in new window if debugging is true and output type is html
+    #set($newWindow =  "false")
+    #if(${debug} == "true" && ${control.getOutputType()} == "HTML")
+        #set($newWindow =  "true")
+    #end
+    ##<div id="${control.getEncodedID()}" class="owd-input opm-document">#parse ( "investigation/Link.vm" )</div>
+    <div id="${control.getEncodedID()}" class="owd-input opm-document">Document generation is not currently available from mobile devices.</div>

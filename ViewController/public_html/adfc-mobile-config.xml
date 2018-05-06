@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+    <task-flow-definition id="Interview-task-flow">
+        <default-activity>Interview</default-activity>
+        <managed-bean>
+            <managed-bean-name>interview</managed-bean-name>
+            <managed-bean-class>com.oracle.determinations.mobile.pages.InterviewPage</managed-bean-class>
+            <managed-bean-scope>application</managed-bean-scope>
+        </managed-bean>
+        <managed-bean id="__1">
+            <managed-bean-name>august2016Interview</managed-bean-name>
+            <managed-bean-class>com.oracle.determinations.mobile.pages.August2016InterviewPage</managed-bean-class>
+            <managed-bean-scope>view</managed-bean-scope>
+        </managed-bean>
+        <view id="Interview">
+            <page>/pages/Interview.amx</page>
+        </view>
+    </task-flow-definition>
+</adfc-mobile-config>

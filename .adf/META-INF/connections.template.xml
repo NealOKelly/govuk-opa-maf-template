@@ -1,0 +1,134 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="HubService" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl"
+             xmlns="">
+    <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="WebServiceConnection">
+        <Contents>
+          <wsconnection description="wsdl/opa-hub.wsdl" service="{http://oracle.com/determinations/opahub/}opa-hub">
+            <model name="{http://oracle.com/determinations/opahub/}opa-hub" xmlns="http://oracle.com/ws/model">
+              <service name="{http://oracle.com/determinations/opahub/}opa-hub">
+                <port name="OPAPort" binding="{http://oracle.com/determinations/opahub/}opahubSOAP">
+                  <soap addressUrl="HUB_SOAP_ENDPOINT" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                  <operation name="Authenticate">
+                    <soap soapAction="http://oracle.com/determinations/opahub/authenticate"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="Version">
+                    <soap soapAction="http://oracle.com/determinations/opahub/version"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="SaveProject">
+                    <soap soapAction="http://oracle.com/determinations/opahub/saveproject"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="GetProject">
+                    <soap soapAction="http://oracle.com/determinations/opahub/getproject"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="GetProjectVersion">
+                    <soap soapAction="http://oracle.com/determinations/opahub/getprojectversion"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="GetInterview">
+                    <soap soapAction="http://oracle.com/determinations/opahub/getinterview"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="RevokeToken">
+                    <soap soapAction="http://oracle.com/determinations/opahub/revoke"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="ListDataSources">
+                    <soap soapAction="http://oracle.com/determinations/opahub/listdatasources"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="ListProjects">
+                    <soap soapAction="http://oracle.com/determinations/opahub/listprojects"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="ListProjectSnapShots">
+                    <soap soapAction="http://oracle.com/determinations/opahub/listprojectsnapshots"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="GetEndPointMetaData">
+                    <soap soapAction="http://oracle.com/determinations/opahub/getendpointmetadata"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                </port>
+              </service>
+            </model>
+          </wsconnection>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="HubJsonService" className="oracle.adf.model.connection.url.HttpURLConnection"
+  adfCredentialStoreKey="HubLoginConnection" credentialStoreKey="HubLoginConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+        <XmlRefAddr addrType="HubJsonService">
+            <Contents>
+                <urlconnection name="HubJsonService" url="http://192.168.100.10:8080/opa-hub">
+                    <authentication style="challange">
+                        <type>basic</type>
+                    </authentication>
+                </urlconnection>
+            </Contents>
+        </XmlRefAddr>
+        <SecureRefAddr addrType="username"/>
+        <SecureRefAddr addrType="password"/>
+    </RefAddresses>
+   </Reference>
+   <Reference name="HubLoginConnection" className="oracle.adf.model.connection.adfmf.LoginConnection"
+             adfCredentialStoreKey="HubLoginConnection" credentialStoreKey="HubLoginConnection"
+             partial="false" manageInOracleEnterpriseManager="true"
+             deployable="true" xmlns="">
+    <Factory className="oracle.adf.model.connection.adfmf.LoginConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="adfmfLogin">
+        <Contents>
+          <login  url="http://192.168.100.10:8080/opa-hub/basicAuth"/>
+          <logout url="http://192.168.100.10:8080/opa-hub/manager/logout"/>
+          <!--<accessControl url=""/>-->
+          <idleTimeout value="15000"/>
+          <sessionTimeout value="28800"/>
+          <authenticationMode value="hybrid"/>
+          <isMultiTenantAware value="false"/>
+          <injectCookiesToRestHttpHeader value="true"/>
+          <includeBasicAuthHeader value="false"/>
+          <rememberCredentials>
+            <enableRememberUserName value="true"/>
+            <rememberUserNameDefault value="true"/>
+            <enableRememberPassword value="true"/>
+            <rememberPasswordDefault value="true"/>
+            <enableStayLoggedIn value="true"/>
+            <stayLoggedInDefault value="true"/>
+          </rememberCredentials>
+          <userObjectFilter/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

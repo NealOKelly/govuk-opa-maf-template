@@ -1,0 +1,13 @@
+/* Header font style */
+.amx-panelPage-facet-header > .amx-outputText{
+    color: red;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+/* Header background color */
+.amx-panelPage-facet-header{
+ background-color:  Black;
+}
+

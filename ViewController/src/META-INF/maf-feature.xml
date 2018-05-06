@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="com.oracle.determinations.mobile.feature1" name="feature1">
+    <adfmf:content id="com.oracle.determinations.mobile.feature1.1">
+      <adfmf:amx file="adfc-mobile-config.xml#Interview-task-flow">
+        <adfmf:includes>
+          <adfmf:include type="JavaScript" file="resources/include.css" id="i3"/>
+        </adfmf:includes>
+      </adfmf:amx>
+    </adfmf:content>
+    <adfmf:properties id="p1">
+      <adfmf:property name="iOSWebView" value="legacy" id="p2"/>
+    </adfmf:properties>
+  </adfmf:feature>
+</adfmf:features>

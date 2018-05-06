@@ -1,0 +1,66 @@
+## Template for question screen, used to display main page asking questions and progressing the investigation
+
+#macro(parseCtrlVm $ctrl)
+    #if(${ctrl.isAttributeInput()})
+        #parse( "controls/AttributeInputControl.vm" )
+    #elseif(${ctrl.isInstanceGroupControl()})
+        #parse("controls/InstanceContainerControl.vm")
+    #else
+        #parse("controls/${control.getControlType()}.vm")
+    #end
+#end
+
+## Render the form
+#set( $contextPath = ${screen.getContext().getContextPath()})
+#set( $rulebaseName = ${screen.getEncodedRulebaseID()} )
+#set( $locale = ${screen.getLocaleString()} )
+#set( $goalID = ${screen.getEncodedGoalID()} )
+#set( $screenID = ${screen.getEncodedScreenID()} )
+    
+<div id="investigation" class="investigation">
+    <form id="owdInterviewForm" name="form" accept-charset="UTF-8" method="POST" action="${post-uri}" enctype="multipart/form-data" role="form">
+
+	#set( $buttonGroup = ${screen.getSubmitButtonGroup()} )
+
+    <h1 class="screen-title">#parse ("investigation/screen-title.vm")</h1>
+    
+    ## Report errors and warnings for the screen
+    #parse( "investigation/screen-messages.vm" )
+    
+        #if(${screen-before-fence}) <input type="hidden" name="__OWD_BEFORE_FENCE" value="1">   #end
+        ## VTL code to loop through the question controls on the Screen object. We do this by rendering
+        ## each QuestionControl in turn.
+        ## Grab the list of controls from the screen
+        #set( $controlList = ${screen.getScreenControls()} )
+
+        #foreach( $control in $controlList )
+            #if(!$control.isAlwaysHidden())
+                #if(!${control.isVisible()})
+                    #set($displayStyle = "display: none" )
+                #else
+                    #set($displayStyle = "")
+                #end
+                <div id="cd-${control.getEncodedID()}" class="cd-${control.getEncodedID()} ${control.getOuterStyle()}" style="width:${control.getOuterWidth()};$displayStyle">
+                    #parseCtrlVm(${control})
+                </div>
+            #end
+        #end
+
+        ##button group at the bottom of the form
+        <div id="cd-${buttonGroup.getEncodedID()}" class="${buttonGroup.getOuterStyle()}">
+            <div class="opm-submit-buttons">
+                <hr class="submit-break"/>
+                <div class="button-spacer">&nbsp;</div>
+
+                #if("${include-back-button}" == "true" && "${back-button-has-url}" == "true")
+                        <button class="owd-back" id="back-button" name="back" type="button" value="clicked">${screen.getBackCaption()}</button>
+                #end
+        
+                #foreach( $button in ${buttonGroup.getControls()})
+                    #set($control = $button)
+                    #parse( "controls/${button.getControlType()}.vm" )
+                #end
+            </div>
+        </div>
+    </form>
+</div>

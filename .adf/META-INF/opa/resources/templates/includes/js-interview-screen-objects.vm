@@ -1,0 +1,266 @@
+##Declares templates objects that are used on interview screens
+
+#set($images-base-path = "${rulebase-static-resources-root}/images/")
+
+##variable for explanation utils
+var explanationParams = {
+    captionCollapseImage: "${encoder.jsVarEncode("${images-base-path}${explanation-caption-collapse-image}")}",
+    captionExpandImage: "${encoder.jsVarEncode("${images-base-path}${explanation-caption-expand-image}")}",
+    nodeExpandImage: "${encoder.jsVarEncode("${images-base-path}${explanation-expand-image}")}",
+    nodeExpandAlt: "${encoder.jsVarEncode(${tree-expand-alt})}",
+    nodeCollapseImage:  "${encoder.jsVarEncode("${images-base-path}${explanation-collapse-image}")}",
+    nodeCollapseAlt: "${encoder.jsVarEncode(${tree-collapse-alt})}"
+
+};
+
+## searching comboboxes
+var searchingComboboxes = {
+    maxResults: ${max-search-results},
+    moreResultsText: "${searching-combo-more-results}",
+    triggerTooltip: "${searching-combo-trigger-tooltip}"
+};
+
+var datePickerOpts = {
+    buttonImageOnly: "true",
+    dateFormat: "${encoder.jsVarEncode("${calendar-date-format}")}",
+#if(${calendar-icon} && ${calendar-icon} != "")
+    showOn: "both",
+    buttonText:  "${encoder.jsVarEncode("${calendar-icon-text}")}",
+    #if(${calendar-icon-external} == "true")
+        buttonImage: "${encoder.jsVarEncode("${calendar-icon}")}",
+    #else
+        buttonImage: "${encoder.jsVarEncode("${images-base-path}${calendar-icon}")}",
+    #end
+#else
+    showOn: "focus",
+#end
+    dayNames: [
+        "${encoder.jsVarEncode("${sun-full}")}",
+        "${encoder.jsVarEncode("${mon-full}")}",
+        "${encoder.jsVarEncode("${tue-full}")}",
+        "${encoder.jsVarEncode("${wed-full}")}",
+        "${encoder.jsVarEncode("${thu-full}")}",
+        "${encoder.jsVarEncode("${fri-full}")}",
+        "${encoder.jsVarEncode("${sat-full}")}"
+    ],
+    dayNamesShort: [
+        "${encoder.jsVarEncode("${sun-short}")}",
+        "${encoder.jsVarEncode("${mon-short}")}",
+        "${encoder.jsVarEncode("${tue-short}")}",
+        "${encoder.jsVarEncode("${wed-short}")}",
+        "${encoder.jsVarEncode("${thu-short}")}",
+        "${encoder.jsVarEncode("${fri-short}")}",
+        "${encoder.jsVarEncode("${sat-short}")}"
+    ],
+    dayNamesMin: [
+        "${encoder.jsVarEncode("${sun-min}")}",
+        "${encoder.jsVarEncode("${mon-min}")}",
+        "${encoder.jsVarEncode("${tue-min}")}",
+        "${encoder.jsVarEncode("${wed-min}")}",
+        "${encoder.jsVarEncode("${thu-min}")}",
+        "${encoder.jsVarEncode("${fri-min}")}",
+        "${encoder.jsVarEncode("${sat-min}")}"
+    ],
+    monthNames: [
+        "${encoder.jsVarEncode("${jan-full}")}",
+        "${encoder.jsVarEncode("${feb-full}")}",
+        "${encoder.jsVarEncode("${mar-full}")}",
+        "${encoder.jsVarEncode("${apr-full}")}",
+        "${encoder.jsVarEncode("${may-full}")}",
+        "${encoder.jsVarEncode("${jun-full}")}",
+        "${encoder.jsVarEncode("${jul-full}")}",
+        "${encoder.jsVarEncode("${aug-full}")}",
+        "${encoder.jsVarEncode("${sep-full}")}",
+        "${encoder.jsVarEncode("${oct-full}")}",
+        "${encoder.jsVarEncode("${nov-full}")}",
+        "${encoder.jsVarEncode("${dec-full}")}"
+    ],
+    monthNamesShort: [
+        "${encoder.jsVarEncode("${jan-short}")}",
+        "${encoder.jsVarEncode("${feb-short}")}",
+        "${encoder.jsVarEncode("${mar-short}")}",
+        "${encoder.jsVarEncode("${apr-short}")}",
+        "${encoder.jsVarEncode("${may-short}")}",
+        "${encoder.jsVarEncode("${jun-short}")}",
+        "${encoder.jsVarEncode("${jul-short}")}",
+        "${encoder.jsVarEncode("${aug-short}")}",
+        "${encoder.jsVarEncode("${sep-short}")}",
+        "${encoder.jsVarEncode("${oct-short}")}",
+        "${encoder.jsVarEncode("${nov-short}")}",
+        "${encoder.jsVarEncode("${dec-short}")}"
+    ]
+};
+
+var screenInfo = {
+    backButtonCaption: "${encoder.jsVarEncode(${screen.getBackCaption()})}",
+    backButtonURL: "${encoder.jsVarEncode(${back-button-url})}",
+    controls: [],
+    controlsByName: {},
+    controlsByType: function(controlType){
+        var matches = [];
+        for(var i = 0; i < screenInfo.controls.length; ++i ){
+            if(screenInfo.controls[i].type === controlType)
+            matches.push(screenInfo.controls[i]);
+        }
+
+        return matches;
+    },
+    hintTextControls: function(){
+        var matches = [];
+        for(var i = 0; i < screenInfo.controls.length; ++i ){
+        if(screenInfo.controls[i].hintText !== undefined)
+            matches.push(screenInfo.controls[i]);
+        }
+    }
+};
+
+
+##metadata for all controls
+#foreach($ctrl in ${screen.getAllControls()})
+    var ctrlInfo = {
+        #if(${ctrl.isAttributeInput()})
+            inputType: "${encoder.jsVarEncode(${ctrl.getInputType()})}",
+            displayValue: "${encoder.jsVarEncode(${ctrl.getDisplayValue()})}",
+            hasHintText: "${ctrl.showHintText()}".toLowerCase() == "true",
+        #end
+        #if(${ctrl.getControlType()})
+            parentCtrlId: "${encoder.jsVarEncode(${ctrl.getParent().getId()})}",
+        #end
+        name: "${encoder.jsVarEncode(${ctrl.getId()})}",
+        id: "${encoder.jsVarEncode(${ctrl.getEncodedID()})}",
+        type: "${ctrl.getControlType()}",
+        state: "${ctrl.getControlState()}"
+        readOnly: ${ctrl.isReadOnly()}
+    };
+
+    #if(${ctrl.getControlType()} == "DateInputControl")
+        ctrlInfo.dayVal = "${ctrl.getDayValue()}";
+        ctrlInfo.monthVal = "${ctrl.getMonthValue()}";
+        ctrlInfo.yearVal = "${ctrl.getYearValue()}";
+        ctrlInfo.name = "${encoder.jsVarEncode(${ctrl.getId()})}";
+        ctrlInfo.dayName = "${encoder.jsVarEncode(${ctrl.getDayId()})}";
+        ctrlInfo.monthName = "${encoder.jsVarEncode(${ctrl.getMonthId()})}";
+        ctrlInfo.yearName = "${encoder.jsVarEncode(${ctrl.getYearId()})}";
+    #end
+
+    #if(${ctrl.showHintText()})
+        #if(${ctrl.getInputType()} == "dmy-inputs")
+            ctrlInfo.dayHintText = htmlDecode("${encoder.jsVarEncode(${ctrl.getDayHintText()})}");
+            ctrlInfo.monthHintText = htmlDecode("${encoder.jsVarEncode(${ctrl.getMonthHintText()})}");
+            ctrlInfo.yearHintText = htmlDecode("${encoder.jsVarEncode(${ctrl.getYearHintText()})}");
+        #else
+            ctrlInfo.hintText = htmlDecode("${encoder.jsVarEncode(${ctrl.getHintText()})}");
+        #end
+    #end
+
+    screenInfo.controls.push(ctrlInfo);
+    screenInfo.controlsByName[ctrlInfo.name] = ctrlInfo;
+#end
+
+
+
+## unsubmitted data
+var unsubmittedDataWarning = {
+    isEnabled: "${warn-unsubmitted-pages}".toLowerCase() === "true",
+    hasUnsubmitted: "$screen.hasUnsubmittedData()".toLowerCase() === "true",
+    warningMsg: "${encoder.jsVarEncode(${unsubmitted-text-label})}"
+};
+
+var stageData = {
+    stages: [
+        #set($first = true)
+        #foreach($item in ${progress-stages})
+            #if(${item.isFutureStage()})
+                #set($progressKind = "future-stage")
+            #elseif (${item.isActive()})
+                #set($progressKind = "active-stage")
+            #else
+                #set($progressKind = "other-stage")
+            #end
+
+            #if(${item.getURL()})
+                #set($url = ${item.getURL()})
+            #else
+                #set($url = "")
+            #end
+
+
+            #if ($first)
+                #set($first = false)
+            #else
+            ,
+            #end
+
+            { "url" : "${encoder.jsVarEncode(${url})}", "text":"${encoder.jsVarEncode(${item.getTitle()})}", "kind":"${progressKind}" }
+        #end
+    ],
+    screens: [
+    #set($first = true)
+        #foreach($item in ${progress-stagescreens})
+            #if (${item.isActive()})
+                #set($progressKind = "active-screen")
+            #else
+                #set($progressKind = "other-screen")
+            #end
+
+            #if(${item.getURL()})
+                #set($url = ${item.getURL()})
+            #else
+                #set($url = "")
+            #end
+
+            #if ($first)
+                #set($first = false)
+            #else
+            ,
+            #end
+            { "url" : "${encoder.jsVarEncode(${url})}", "text":"${encoder.jsVarEncode(${item.getTitle()})}", "kind":"${progressKind}" }
+        #end
+    ]
+};
+
+var dataFormats = {
+    "bool": {
+        "trueVal": "${encoder.jsVarEncode(${boolean-true})}",
+        "falseVal": "${encoder.jsVarEncode(${boolean-false})}",
+        "uncertainVal": "${encoder.jsVarEncode(${boolean-uncertain})}",
+        "unknownVal": "${encoder.jsVarEncode(${boolean-unknown})}"
+    }
+};
+
+#if(${disable-dynamic-control-state} != "true")
+    var dynamicControlStateEnabled = true;
+    var controlRules = [
+        #set($first = true)
+        #foreach($rule in ${dynamic-conditions})
+            #if ($first)
+                #set($first = false)
+            #else
+            ,
+            #end
+            {
+                "ctrlName": "${encoder.jsVarEncode(${rule.getControlId()})}",
+                "currentState":"${rule.getCurrentState()}",
+                "defaultState": "${rule.getDefaultState()}",
+                "hideIfExpr": #writeExpression(${rule.getHideIfExpression()}),
+                "readOnlyIfExpr": #writeExpression(${rule.getReadOnlyIfExpression()}),
+                "optionalIfExpr": #writeExpression(${rule.getOptionalIfExpression()})
+            }
+        #end
+    ];
+#else
+    var dynamicControlStateEnabled = false;
+#end
+
+#macro(writeExpression $expr)
+    {
+        "isConstant": "${expr.isConstant()}".toLowerCase() === "true",
+        #if(${expr.isConstant()})
+            "result" : "${expr.getConstResult()}".toLowerCase() === "true"
+        #else
+            "exprType": "${expr.getExpressionType()}",
+            "attrCtrlName": "${encoder.jsVarEncode(${expr.getAttributeControlId()})}",
+            "exprVal": "${expr.getExpressionVal()}".toLowerCase() === "true"
+        #end
+    }
+#end

@@ -1,0 +1,218 @@
+{
+
+"screenInfo": {
+    "backButtonCaption": "${encoder.jsVarEncode(${screen.getBackCaption()})}",
+    "backButtonURL": "${encoder.jsVarEncode(${back-button-url})}",
+    "controlsByName": {},
+    "controls": [
+
+##metadata for all controls
+#foreach($ctrl in ${screen.getAllControls()})
+    {
+        #if(${ctrl.isAttributeInput()})
+            "inputType": "${encoder.jsVarEncode(${ctrl.getInputType()})}",
+            "displayValue": "${encoder.jsVarEncode(${ctrl.getDisplayValue()})}",
+            "hasHintText": ${ctrl.showHintText()},
+            "dataType": ${ctrl.getAttr().getValueType()},
+        #end
+        #if(${ctrl.getControlType()})
+            "parentCtrlId": "${encoder.jsVarEncode(${ctrl.getParent().getId()})}",
+        #end
+        "name": "${encoder.jsVarEncode(${ctrl.getId()})}",
+        "id": "${encoder.jsVarEncode(${ctrl.getEncodedID()})}",
+        "type": "${ctrl.getControlType()}",
+
+        ##for input controls, write out the control's current value.
+        #if(${ctrl.getControlType().equals("BooleanInputControl")})
+            #if(${ctrl.getRawValue()} == true)
+                "actValue": "true",
+            #elseif(${ctrl.getRawValue()} == false)
+                "actValue": "false",
+            #else
+                "actValue": "",
+            #end
+        #elseif(${ctrl.getInputType().equals("dmy-inputs")} || ${ctrl.getInputType().equals("Calendar")})
+            "actDayVal": "${ctrl.getActDayValue()}",
+            "actMonthVal": "${ctrl.getActMonthValue()}",
+            "actYearVal": "${ctrl.getActYearValue()}",
+            "dayVal": "${ctrl.getDayValue()}",
+            "monthVal": "${ctrl.getMonthValue()}",
+            "yearVal": "${ctrl.getYearValue()}",
+            "name": "${encoder.jsVarEncode(${ctrl.getId()})}",
+            "dayName": "${encoder.jsVarEncode(${ctrl.getDayId()})}",
+            "monthName": "${encoder.jsVarEncode(${ctrl.getMonthId()})}",
+            "yearName": "${encoder.jsVarEncode(${ctrl.getYearId()})}",
+            "readOnly": ${ctrl.isReadOnly()},
+        #elseif(${ctrl.isAttributeInput()})
+            "actValue": "${encoder.jsVarEncode(${ctrl.getActualValue()})}",
+        #end
+        "state": "${ctrl.getControlState()}"
+    }
+    #if( $foreach.hasNext ),#end
+#end
+]},
+
+## unsubmitted data
+"unsubmittedDataWarning" : {
+    "isEnabled": ${warn-unsubmitted-pages},
+    "hasUnsubmitted": ${screen.hasUnsubmittedData()},
+    "warningMsg": "${encoder.jsVarEncode(${unsubmitted-text-label})}"
+},
+
+"stageData": {
+    "stages": [
+        #foreach($item in ${progress-stages})
+            #if(${item.isFutureStage()})
+                #set($progressKind = "future-stage")
+            #elseif (${item.isActive()})
+                #set($progressKind = "active-stage")
+            #else
+                #set($progressKind = "other-stage")
+            #end
+
+            #if(${item.getURL()})
+                #set($url = ${item.getURL()})
+            #else
+                #set($url = "")
+            #end
+            { "url":"${encoder.jsVarEncode(${url})}", "text":"${encoder.jsVarEncode(${item.getTitle()})}", "kind":"${progressKind}" }
+            #if( $foreach.hasNext ),#end
+        #end
+    ],
+    "screens": [
+        #foreach($item in ${progress-stagescreens})
+            #if (${item.isActive()})
+                #set($progressKind = "active-screen")
+            #else
+                #set($progressKind = "other-screen")
+            #end
+
+            #if(${item.getURL()})
+                #set($url = ${item.getURL()})
+            #else
+                #set($url = "")
+            #end
+            { "url":"${encoder.jsVarEncode(${url})}", "text":"${encoder.jsVarEncode(${item.getTitle()})}", "kind":"${progressKind}" }
+            #if( $foreach.hasNext ),#end
+        #end
+    ]
+},
+
+#if(${disable-dynamic-control-state} != "true" && ${dynamic-conditions})
+    "controlRules": [
+        #foreach($rule in ${dynamic-conditions})
+            {
+                "ctrlName": "${encoder.jsVarEncode(${rule.getControlId()})}",
+                "currentState":"${rule.getCurrentState()}",
+                "defaultState": "${rule.getDefaultState()}",
+                "hideIfExpr": #writeExpression(${rule.getHideIfExpression()}),
+                "readOnlyIfExpr": #writeExpression(${rule.getReadOnlyIfExpression()}),
+                "optionalIfExpr": #writeExpression(${rule.getOptionalIfExpression()})
+            }
+            #if( $foreach.hasNext ),#end
+        #end
+    ],
+#else
+    "controlRules": [],
+#end
+
+"dataFormats": {
+    "bool": {
+        "trueVal": "${encoder.jsVarEncode(${boolean-true})}",
+        "falseVal": "${encoder.jsVarEncode(${boolean-false})}",
+        "uncertainVal": "${encoder.jsVarEncode(${boolean-uncertain})}",
+        "unknownVal": "${encoder.jsVarEncode(${boolean-unknown})}"
+    }
+},
+
+##dynamic enum data
+#if(${list-filters})
+    #set($first = true)
+
+"listFilterRules": [
+    #foreach($filter in ${list-filters})
+        #if($first)
+            #set($first = false)
+        #else
+        ,
+        #end
+    {
+    "parentCtrlName" : "${filter.getParentControl().getId()}",
+    "childCtrlName"  : "${filter.getChildControl().getId()}",
+    "values" : #writeFilterVals($filter)
+    }
+    #end
+
+]
+#else
+"listFilterRules": []
+#end
+
+}
+
+#macro(writeExpression $expr)
+    {
+        "isConstant": "${expr.isConstant()}".toLowerCase() === "true",
+        #if(${expr.isConstant()})
+            "result" : "${expr.getConstResult()}".toLowerCase() === "true"
+        #else
+            "exprType": "${expr.getExpressionType()}",
+            "exprOp": "${expr.getExpressionOperator()}",
+            "attrCtrlName": "${encoder.jsVarEncode(${expr.getAttributeControlId()})}",
+            "exprValType": ${expr.getValueType()},
+            "exprVals": #writeExpressionVals(${expr.getExpressionValues()}, ${expr.getValueType()})
+        #end
+    }
+#end
+
+#macro(writeExpressionVals $values $type)
+    #set($first = true)
+    [
+        #foreach($val in $values)
+            #if($first)
+                #set($first = false)
+            #else
+            ,
+            #end
+
+            ##strings need to be quoted. All other data values should be in the correct JS format
+            #if((!$val) && "$!val" == "")
+                null
+            #elseif($val == "")
+                ""
+            #elseif($type == 2)
+                "${encoder.jsVarEncode($val)}"
+            #else
+                $val
+            #end
+        #end
+    ]
+
+#end
+
+#macro(writeFilterVals $filter)
+    #set($firstVal = true)
+{
+    #foreach($val in $filter.getParentValues())
+        #if($firstVal)
+            #set($firstVal = false)
+        #else
+        ,
+        #end
+        #set($childVals = $filter.getChildValues($val))
+
+    "${encoder.jsVarEncode($val)}" : [
+        #set($firstChild = true)
+        #foreach($child in $childVals)
+            #if($firstChild)
+                #set($firstChild = false)
+            #else
+            ,
+            #end
+        { "value" : "${encoder.jsVarEncode(${child.getValue()})}", "display" : "${encoder.jsVarEncode(${child.getDisplayText()})}"}
+        #end
+    ]
+    #end
+}
+#end
+
