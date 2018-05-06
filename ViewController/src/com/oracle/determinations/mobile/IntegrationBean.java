@@ -15,10 +15,10 @@ public class IntegrationBean {
 	public void handleLaunchInterview(ActionEvent evt) {
 		try {
 			ClassLoader cl = Thread.currentThread().getContextClassLoader();
-			InputStream is1 = cl.getResourceAsStream(".adf/META-INF/Loan Advisor.zip");
-			InterviewRuntime.startInterview("Loan Advisor", IOUtils.toByteArray(is1));
+			InputStream is1 = cl.getResourceAsStream(".adf/META-INF/GOVUK-OPA-Mobile-Demo.zip");
+			InterviewRuntime.startInterview("GOVUK-OPA-Mobile-Demo", IOUtils.toByteArray(is1));
 		} catch (IOException ex) {
-			throw new AdfException("Error loading Loan Advisor policy model", AdfException.ERROR);
+			throw new AdfException("Error loading Mobile Demo policy model", AdfException.ERROR);
 		}
 	}
 }

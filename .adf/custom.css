@@ -1,0 +1,72 @@
+/************************************************
+
+This is the file for specific rulebase related changes which are necessary because 
+of OPA's annoying way of doing things.  Essentially, overriding OPA's styling defaults 
+when we cannot override them elsewhere.
+
+************************************************/
+.onScreenVersion { /*used on every screen to move a label into the top corner*/
+	position: absolute;
+	top: 0;
+	right:30px;
+	color:#6F777B;
+	font-size:12px;
+}
+
+.opa-entity-collect {
+	/****
+	In IE (and the OPA debug screens, which is IE really), the flex display causes 
+	an ugly gap to appear between the last entity and the add button - which 
+	increases with every added entity.  This fixes it, by changing display 
+	from flex to block.
+	****/
+	display:block;
+}
+
+button[restylekey=entityRemoveButton] svg circle {
+	/****
+	This seems to be an error in the OPA coding, the out-of-the-box
+	styling seems to still cater for a "remove" button, rather than 
+	this cross!
+	The out-of-the-box seems to have a blank white circle, but by 
+	colouring the circle black, the white cross is revealed.
+	****/
+	fill:#005EA5; /*makes the circle blue like a link - it seems to be white*/
+}
+button[restylekey=entityRemoveButton]:hover svg circle {
+	fill:#2B8CC4; /*hover colour is lighter*/
+}
+
+
+
+/****  Next Button Error Highlighting ****/
+.errorReminder::after {
+	content:"Errors exist on the page, please review"; /*text to display when error exists*/
+	display:block;
+	font-weight:bold;
+	padding:5px 0;
+	color:#B10E1E;
+}
+input.errorButton {
+	/*the input tag is important here as we don't want to affect the back button*/
+    margin-bottom: 6px; /*increase margin for above text*/
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+/****  End of Next Button Error Highlighting ****/
+
+/****  The re-styling of disabled fields as non-questions  ****/
+/*only for text fields*/
+.opa-interview input[type=text][readonly]{
+	background-color: white;
+    outline-width: 0px!important;
+    font-weight: bold!important;
+    padding-left: 0.2em!important;
+    box-shadow: 0 -2px 0 0 #0B0C0C;
+	nav-index:-1;
+}
+
+.opa-interview input[type=text][readonly]:focus{
+	/*box-shadow:none;*/
+}
+/****  End of the re-styling of disabled fields as non-questions  ****/

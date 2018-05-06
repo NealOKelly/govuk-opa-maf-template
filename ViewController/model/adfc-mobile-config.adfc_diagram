@@ -7,16 +7,47 @@
       <property
          name="activityId">Interview</property>
       <property
+         name="x">-879.5</property>
+      <property
+         name="start">false</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Interview&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">-1350.0273</property>
+      <property
          name="page">/pages/Interview.amx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">view1</property>
+      <property
+         name="x">-764.5</property>
       <property
          name="start">true</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>Interview&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">-1321.9023</property>
+      <property
+         name="page">/pages/LaunchPage.amx</property>
       <property
          name="exceptionHandler">false</property>
-      <property
-         name="y">-1348.625</property>
-      <property
-         name="x">-879.5</property>
    </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View3"
+      to="View51">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">startInterview</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">L50,-805.5,-1321.9023,-838.5,-1350.0273,R50</property>
+   </ControlFlowCase>
 </SDM>

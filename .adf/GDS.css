@@ -1,0 +1,845 @@
+/**************************
+
+This file is for GDS styles only, which cannot be achieved by OPA's in-built custom styles
+
+**************************/
+
+
+
+@charset "UTF-8";
+@-ms-viewport {
+	width: device-width
+}
+@-o-viewport {
+	width: device-width
+}
+
+/********   High-level stuff   ********/
+a:link { /*GDS colour for links*/
+    color: #005EA5;
+}
+a:visited { /*GDS colour for links*/
+    color: #4C2C92;
+}
+a:active { /*GDS colour for links*/
+    color: #2B8CC4;
+}
+a:hover { /*GDS colour for links*/
+    color: #2B8CC4;
+}
+
+.opa-control-item {
+    max-width: 700px;
+	/*This is to achieve the 2/3 width look as mandated by GDS*/
+	margin-top:1em;
+	/*This increases the gap between questions*/
+}
+
+/******** End of high-level *******/
+
+/****  Fix for jumping radio buttons  ****/
+legend.opa-question img[alt="This value is mandatory."]{
+	display:none;
+	/*this kills off the mandatory star, but GFS don't like them anyway*/
+}
+/****  End of fix for jumping radio buttons  ****/
+
+/********   Optional fields tag   ********/
+
+.opa-question-optional::after {
+	/*this class is added in custom.js*/
+	/*we give it "1st child" because it needs to occur before any help text*/
+	content:" (optional)";
+}
+
+/********   End of optional fields tag   ********/
+
+
+/********   Hint text *******/
+.hint-text {
+	color:#6F777B;
+	font-weight:normal;
+}
+/********   End of hint text *******/
+
+/********   Input fields   ********/
+input, select {
+	outline-width: 2px!important;
+    outline-color: #0B0C0C!important;
+    /*minor GDS styling - thick black boxes*/
+}
+
+.opa-dmy-container input {
+	margin-right:3px;
+	/*For drop-down boxes, spaces them out as the GDS thick outlines butt up against one another.*/
+}
+
+/*The below are to hide the placeholder text*/
+.opa-dmy-container input::-webkit-input-placeholder{ 
+	color: transparent;
+}
+.opa-dmy-container input::-moz-placeholder{ 
+	color: transparent;
+}
+.opa-dmy-container input:-ms-input-placeholder{ 
+	color: transparent;
+}
+.opa-dmy-container input:-moz-placeholder{ 
+	color: transparent;
+}
+.opa-dmy-container input::placeholder { 
+	color: transparent;
+}
+
+.opa-question span { /*GDS font size for question*/
+	font-size:19px;
+}
+
+input[disabled="disabled"] {
+	opacity:0.5;/*disabled fields*/
+}
+
+
+textarea {
+	outline: #0B0C0C solid 2px!important; /*this stops OPA's own outline styling*/
+	max-width:100%!important; /*forces all textareas to be full-width*/
+	/*This is a kill-all approach, removing the width chosen by dragging the 
+	textarea's size in the screen editor.  Note that it is max-width because this
+	is what is restraining the size - width is already 100%*/
+}
+textarea:focus,
+select:focus,
+input[type=password]:focus,
+input[type=text]:focus {
+	box-shadow: 0 0 0 4px #FFBF47; /*orange border when focused*/
+	outline: #0B0C0C solid 2px!important; /*this stops OPA's own focus styling*/
+	/*!important required here to override OPA's element styling done with JS (I think)*/
+}
+.opa-calendar-container {
+	outline:0px!important; /*this sometimes get one added by JS*/
+}
+
+.opa-calendar-container .opa-dropdown.widget { /*this be the little calendar to click on*/	
+	cursor:pointer; /*makes the cursor a little hand*/
+}
+/********   End of input fields   ********/
+
+/********   Tick boxes and radio buttons   ********/
+/*GDS styles have changed since Aug15 was styled, so these are different*/
+input+svg>* {
+	stroke:#0B0C0C; /*thick black border to circle/square*/
+	stroke-width:2px;
+}
+input+svg {
+	padding:1px; /*stops the extreme edges being cut off*/
+}
+input[disabled="disabled"]+svg+span {
+	opacity:0.5;
+}
+input[disabled="disabled"]+svg>* {
+	fill:#fff;
+	opacity:0.5;
+}
+
+.opa-radio-container {
+	font-size:19px; /*GDS size*/
+	margin: 10px 0 10px 0;/*spacing*/
+	cursor: pointer!important; /*this changes the mouse curser to a nice little hand, thus more associated with links and indicating to users that the whole box can be clicked, rather than just the little circle*/
+	/*important - OPA has it in the element style*/
+}
+.opa-radio-container>span {
+    margin-left: 2.35em!important; /*this increases the gap betwixt the box and the text*/
+	/*important - OPA has it in the element style*/
+	margin-top: 0.05em;
+}
+.opa-radio-container>input[type=radio]:focus+svg {
+	border-radius:15px; /*this makes the element as round as the circle it contains - so the outline is snug*/
+	box-shadow:0 0 0 3px #FFBF47; /*this adds the orange outline - note we are outlining the whole box rather than just the circle*/
+	outline:none!important;
+	/*important - OPA changes the element style on a tab so this needs to be overridden*/
+}
+
+.opa-radio-container>input[type=checkbox]:focus+svg {
+	box-shadow:0 0 0 2.5px #FFBF47; /*this adds the orange outline - note we are outlining the whole box rather than just the circle*/
+	background-color: #FFBF47; /*this fills in the tiny gap between the box and the shadow which is part of the SVG - hence why the above line is only 2.5px*/
+	outline:none!important;
+	/*important - OPA changes the element style on a tab so this needs to be overridden*/
+}
+/********   End of tick boxes and radio buttons   ********/
+
+/********   Next button  ********/
+input[type=submit] { /*Sets up the next button*/
+	-webkit-font-smoothing: antialiased; /*makes font look nicer in some browsers*/
+	box-shadow: 0 2px 0 #003618; /*Sets the dark bottom border*/
+	position:relative;
+	margin: 1.5em 0 1em; /*gap betwixt the buttons and the last question & footer*/
+}
+input[type=submit].disabled,
+input[type=submit][disabled=disabled],
+input[type=submit][disabled] { /*this gives the greyish overlay to the button*/
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+input[type=submit]:active, 
+input[type=submit]:focus, 
+input[type=submit]:hover { /*makes the green darker when hovering over with the mouse or tabbing onto the button*/
+	background-color: #00692F!important;
+	/*important - OPA has it in the element style*/
+}
+
+input[type=submit]:active { /*Sets up the next button when active*/
+	box-shadow: none; /*bottom shadow removed to give impression of mechanical button*/
+	top:2px; /*creates a "press" mechanical effect*/
+}
+
+input[type=submit]:focus { /*temporary active styling*/
+	outline: 3px solid #FFBF47!important; /*orange outline*/
+	/*important - OPA has outline:none in the element style*/
+}
+/********   End of next button  ********/
+
+/********   Back button   ********/
+button[restylekey=backButton] {
+	text-decoration: underline; /*adds an underline to the text*/
+	border:solid white!important; /*border replaces padding for this button*/
+	padding: 3px!important; /*so the background can be used as highlighting and*/
+	border-width:6.3px 13px!important; /*isn't overly big*/
+	/*important - OPA has all these in the element style (grrr)*/
+	overflow:hidden; /*only important when zoomed in - an annoying scroll bar appears!  Can you believe it!*/
+	position: absolute; /*we position the back button at the top - REQUIRES THE NECESSARY PADDING DONE BELOW*/
+	left:4px;
+	top: -30px; /*embedded only*/
+}
+#interview button[restylekey=backButton] { /*this is different between embedding and non-embedding*/
+	top:29px; /*non-embedded only*/
+}
+#interview header[role=banner]+* {
+	padding-top:40px; /*non-embedded only*/
+}
+#interviewDiv form[role=form] { /*embedded only*/
+	margin-top:36px; /*this allows the re-positioning of the back button*/
+}
+button[restylekey=backButton]:hover,
+button[restylekey=backButton]:active {
+	color:#2B8CC4;
+}
+button[restylekey=backButton]:focus {
+	background-color: #FFBF47!important; /*orange outline*/
+	/*important - OPA has background-color:white in the element style*/
+	outline:none!important;
+	/*important - OPA changes the element style on a tab so this needs to be overridden*/
+}
+button[restylekey=backButton]::before {
+	content:"◄ "; /*a little arrow before the text*/
+}
+/********   End of back button   ********/
+
+/********   Add entity button   ********/
+button[restylekey=entityAddButton] {
+	margin-top:11px; /*a gap betwixt the last entity and the button*/
+	margin-left:9px; /*aligns with questions and answers*/
+	border:1px solid #7D7D7D!important; /*border for the button*/
+	/*important - OPA has border set to 0px in the element style*/
+	padding:5px 10px!important;
+	/**/
+}
+button[restylekey=entityAddButton]::before {
+	content:"+ "; /*adds a plus to the button as per https://paper.dropbox.com/doc/Navigation-buttons-continue-next-previous-ghLqL5a9Ostxxb3rvBhyO*/
+}
+button[restylekey=entityAddButton]:hover, 
+button[restylekey=entityAddButton]:focus {
+	background-color:#DEE0E2!important; /*darkens the button*/
+	/*important - OPA has background-color in the element style*/
+}
+button[restylekey=entityAddButton]:active, 
+button[restylekey=entityAddButton]:focus {
+	box-shadow:0 0 0 3px #FFBF47; /*this adds the orange outline with rounded corners*/
+	outline: none!important; /*removes outline*/
+	/*important - OPA puts outline in the element style with JS*/
+}
+/********   End of add entity button   ********/
+
+/********   Entity remove button   ********/
+/*See "custom.css" as the main styling corrects an OPA fault*/
+button[restylekey=entityRemoveButton]:focus svg {
+	border-radius:15px; /*this makes the ede of the SVG a circle like that which it contains*/
+	box-shadow:0 0 0 3px #FFBF47; /*this adds the orange outline with rounded corners*/
+	}
+button[restylekey=entityRemoveButton]:focus svg path{
+	fill:#FFBF47; /*this makes the cross orange too*/
+	}
+button[restylekey=entityRemoveButton]:focus {
+	overflow:visible;/*This be to avoid the cropping of the circle highlighting*/
+	outline: none!important; /*removes outline*/
+	/*important - OPA puts outline in the element style with JS*/
+}	
+
+/********   End of entity remove button   ********/
+
+/********   Entity collection row   ********/
+
+.opa-instance-row { /*adds a black line above*/
+	border-top: 1px solid #0B0C0C; /*Adds a line to the top of each instance collect, enabling user to see where one ends and the other begins.*/
+	padding: 27px 0; /*adds a gap between instances*/
+}
+/********   End of Entity collect row   ********/
+
+/********   Fatal errors   ********/
+.opa-fatal-errors div.opa-error-text {
+	padding:20px 60px 20px 30px; /*increases distance from box*/
+	border:5px solid green; /*adds the red border*/
+	margin-right:10px; /*adds a gap between the border and the edge of the page*/
+	
+}
+.opa-fatal-errors div.opa-error-text::before {
+	content: ""; /*an i, for "information"*/
+    color: #FFF; /*colour of i*/
+    font-size: 15px; /*sixe of i*/
+    font-weight: bolder; /*boldest weight for the i*/
+    font-family: sans-serif; /*a standard font*/
+    padding: 11px; /*padding to create a circle*/
+    background-color: #B10E1E; /*red*/
+    background:url("${resources-root}/images/icon_error.gif") no-repeat;
+	margin-right: 9px; /*gap betwixt the i and the alert text*/
+	position:absolute;
+	z-index:1111;
+}
+.opa-fatal-errors div.opa-error-text span,
+.opa-fatal-errors div.opa-error-text div {
+	color:#0B0C0C; /*this overrides the text colour*/
+	position:relative; /*this moves the text away from the blue i*/
+	left:40px;
+
+}
+/********   End of fatal errors   ********/
+
+/********   Page errors   ********/
+.opa-page-error .opa-error-text div:not(.opa-error-text) {
+	/****
+	May17 style only
+	Note that this excludes the div which is hidden completely in custom.css
+	****/
+	color:#0B0C0C; /*this overrides the text colour*/
+}
+.opa-page-error span {
+	/****
+	Aug17 style only
+	Note that this styles both error and warning text
+	****/
+	color:#0B0C0C; /*this overrides the text colour*/
+}
+/*BELOW TWO changed to accommodate Aug17 styles*/
+.opa-page-error div.opa-error-text{
+	padding:20px 30px; /*increases distance from box*/
+	border:5px solid #B10E1E; /*adds the red border*/
+	margin-right:10px; /*adds a gap between the border and the edge of the page*/
+}
+.opa-page-error div.opa-warning-text{
+	padding:20px 60px 20px 30px; /*increases distance from box*/
+	border:5px solid #2B8CC4; /*adds the red border*/
+	margin-right:10px; /*adds a gap between the border and the edge of the page*/
+}
+.opa-page-error div.opa-warning-text span{
+	position:relative;
+	left:40px;
+}
+
+.opa-page-error div.opa-warning-text::before{ /*this replaces the i image for warnings*/
+	content: "i"; /*an i, for "information"*/
+    color: #FFF; /*colour of i*/
+    font-size: 15px; /*sixe of i*/
+    font-weight: bolder; /*boldest weight for the i*/
+    font-family: sans-serif; /*a standard font*/
+    padding: 2px 11px 3px; /*padding to create a circle*/
+    border-radius: 16px; /*rounded*/
+    background-color: #2B8CC4; /*blue*/
+    margin-right: 9px; /*gap betwixt the i and the alert text*/
+	position:absolute;
+	z-index:1111;
+}
+
+/********   End of page errors   ********/
+
+/********   Question errors   ********/
+.opa-control-item-error,
+.opa-control-item-error fieldset {
+	box-shadow: -3px 0px 0px 0px #B10E1E; /*A darkred line to the side of the question*/
+	display: flex; /*allows re-ordering of items*/
+	flex-direction:column; /*to make the above behave properly*/
+}
+.opa-control-item-error .opa-control input, /*for normal text boxes*/
+.opa-control-item-error .opa-control textarea, /*for large text boxes*/
+.opa-control-item-error .opa-control select { /*for drop-down lists*/
+	outline: 3px solid #B10E1E!important; /*a red border on the answer box*/
+	/*Important here because outline is already in the element's style*/
+}
+.opa-control-item-error .opa-control input:focus, /*for normal text boxes*/
+.opa-control-item-error .opa-control textarea:focus, /*for large text boxes*/
+.opa-control-item-error .opa-control select:focus { /*for drop-down lists*/
+	box-shadow:0 0 0 6px #FFBF47; /*increases the box shadow to show beyond red error border*/
+}
+.opa-control-item-error .opa-radio-container>input[type=radio]+svg {
+	overflow:visible; /*This is to show the whole circle now that is has been thickened - only needed for circle.*/
+}
+.opa-control-item-error .opa-radio-container>input[type=radio]+svg>circle,
+.opa-control-item-error .opa-radio-container>input[type=checkbox]+svg>rect {
+	stroke:#B10E1E; /*changes the colour of the circle and square*/
+	stroke-width:3px; /*thickens the line*/
+}
+.opa-control-item-error .opa-control {
+	order:2; /*puts it after the error*/
+}
+.opa-control-item-error .opa-control {
+	order:1; /*puts it before the answer box*/
+}
+.opa-control-item-error .opa-error {
+	margin:0; /*overrides an OPA style, but for once we don't need !important!*/
+	padding: 0 2px;
+}
+
+/********   End of question errors   ********/
+
+
+/********   Important information (in line warnings)   ********/
+div.important-information::before{ /*this replaces the i image for warnings*/
+	content: "!"; /*an !*/
+    color: #FFF; /*colour of !*/
+    font-size: 30px; /*size of !*/
+    font-family: sans-serif; /*a standard font*/
+    padding: 0 18px; /*padding to create a circle*/
+    border-radius: 30px; /*rounded*/
+    background-color: #0B0C0C; /*black*/
+	position:absolute;
+	left:15px;
+}
+div.important-information {
+	margin: 1.5em 0 1.5em 65px;
+    
+}
+
+
+/********   Important information (in line warnings)   ********/
+
+
+/********   Alerts (in line warnings)   ********/
+.opa-alert::before{ /*this replaces the i image for warnings*/
+	content: "i"; /*an i, for "information"*/
+    color: #FFF; /*colour of i*/
+    font-size: 15px; /*sixe of i*/
+    font-weight: bolder; /*boldest weight for the i*/
+    font-family: sans-serif; /*a standard font*/
+    padding: 2px 10px 3px; /*padding to create a circle*/
+    border-radius: 16px; /*rounded*/
+    background-color: #2B8CC4; /*blue*/
+    margin-right: 9px; /*gap betwixt the i and the alert text*/
+}
+.opa-alert{ /*this replaces the i image for warnings*/
+	color:#0b0c0c!important; /*we are overriding the colour here*/
+	/*
+	This overrides a colour we can pick in OPA, but to set it to this colour
+	wihout the above styling might be confusing, so we set it to blue in OPA
+	and override that here.
+	*/
+}
+/********   End of alerts (in line warnings)   ********/
+
+
+/********   Navigation bar (navbar)    ********/
+
+nav[role=navigation]>div>div>div {
+	/*This affects both the menu link and the bar beneath it*/
+	/*only top horizontal navigation bars are tagged with a nav tag*/
+	width:auto!important; /*removes the set width for horizontal bars*/
+}
+nav[role=navigation]>div {
+	/*only top horizontal navigation bars are tagged with a nav tag*/
+	border: #bfc1c3 solid;
+	padding-top:8px; /*the padding at the bottom is effectively done with an unused div - rendered invisible by the above style*/
+	border-width: 1px 0;
+}
+
+.opa-complete-stage a:hover,
+.opa-complete-screen a:hover,
+.opa-incomplete-stage a:hover,
+.opa-incomplete-screen a:hover,
+/*We need to apply it to the span as well*/
+.opa-complete-stage a:hover span,
+.opa-complete-screen a:hover span,
+.opa-incomplete-stage a:hover span,
+.opa-incomplete-screen a:hover span {
+	/*adds an underline to links when hovered over*/
+	/*GDS approved example at https://paper.dropbox.com/doc/Progress-indicators-FKi7F1KBjks0jGG5vMdVg*/
+	text-decoration:underline;
+}
+
+.opa-complete-stage a:focus,
+.opa-complete-screen a:focus,
+.opa-incomplete-stage a:focus,
+.opa-incomplete-screen a:focus {
+	/*highlights menu links when clicked*/
+	background-color:#FFBF47;
+}
+
+
+/********   End of navigation bar (navbar)    ********/
+
+/********   Entity collect table rows ********/
+div[role=row] {
+	border-bottom:#c0c2c4 solid 1px; /*deliminator betwixt rows in an entity collect table*/
+}
+div[role=row]:last-child {
+	border-bottom:0px; /*last row excluded - this only has the add instance button*/
+}
+
+/********   End of entity collect table rows ********/
+
+/********   Data table rows   ********/
+
+table.table {
+	width: 100%;
+	max-width:600px;
+	border-collapse: collapse;
+}
+table.table td {
+	border-bottom:1px solid #bfc1c3;
+	padding: 7px;
+}
+
+
+/********   End of data table rows   ********/
+
+/********   Pop-up warnings and errors ********/
+/***pop-up (e.g. time out) warnings***/
+form[role=form]>div[role=alert]:first-child>div:last-child {
+	background-color:white!important;
+	border: #005EA5 solid 5px;
+	box-shadow: 0px 0px 2px 4px white;
+	color:#0B0C0C!important;
+}
+form[role=form]>div[role=alert]:first-child>div:last-child svg,
+form[role=form]>div[role=alert]:first-child>div:last-child svg path {
+	fill:#005EA5; /*warning colour*/
+	stroke:#005EA5; /*warning colour*/
+}
+
+/***pop-up errors (e.g. session ended)***/
+form[role=form]>div>div[role=alert]>div:last-child {
+	background-color:white!important;
+	border: #B10E1E solid 5px;
+	box-shadow: 0px 0px 2px 4px white;
+	color:#0B0C0C!important;
+}
+form[role=form]>div>div[role=alert]>div:last-child svg,
+form[role=form]>div>div[role=alert]>div:last-child svg circle,
+form[role=form]>div>div[role=alert]>div:last-child svg path {
+	fill:#B10E1E; /*error colour*/
+	stroke:#B10E1E; /*error colour*/
+}
+
+/*** Buttons for both warnings and errors***/
+/*** Firstly for non-primary buttons, then primary ones ***/
+form[role=form]>div[role=alert]:first-child>div:last-child button,
+form[role=form]>div>div[role=alert]>div:last-child button{
+	overflow-y: hidden;/*stops scroll bars appearing on buttons*/
+	background-color:white!important; /*white background colour*/
+	color:#005EA5!important;/*returns colour to link-blue (style = inherit)*/
+	text-decoration:underline;
+	padding:3px!important;/*reduces enormous padding from style*/
+	border-width: 6.3px 13px!important;
+	text-transform:lowercase; /*overrides the all-caps content and makes it lower case*/
+	font-size:16px;
+}	
+form[role=form]>div[role=alert]:first-child>div:last-child button:hover,
+form[role=form]>div>div[role=alert]>div:last-child button:hover{
+	color:#2B8CC4; /*link hover colour*/
+}
+form[role=form]>div[role=alert]:first-child>div:last-child button:focus,
+form[role=form]>div>div[role=alert]>div:last-child button:focus{
+    background-color: #FFBF47!important;
+    outline: none!important;
+}
+	/*Amends the above for the main (1st) button only*/
+form[role=form]>div[role=alert]:first-child>div:last-child button:first-child,
+form[role=form]>div>div[role=alert]>div:last-child button:first-child{
+	background-color:#00823B!important; /*normal next button colour*/
+	color:white!important;/*returns colour to white (otherwise style = inherit)*/
+	box-shadow: 0 2px 0 #003618; /*Sets the dark bottom border*/
+	padding:0.7em 1.2em!important;
+	border-width: 0px!important; /*removes white border*/
+	text-decoration:none;
+}
+form[role=form]>div[role=alert]:first-child>div:last-child button:first-child:hover,
+form[role=form]>div>div[role=alert]>div:last-child button:first-child:hover{
+	color:white; /*link hover colour*/
+}
+form[role=form]>div[role=alert]:first-child>div:last-child button:first-child:focus,
+form[role=form]>div>div[role=alert]>div:last-child button:first-child:focus{
+    outline: 3px solid #FFBF47!important;
+	background-color: #00692F!important;
+	
+}
+form[role=form]>div[role=alert]:first-child>div:last-child button:first-letter ,
+form[role=form]>div>div[role=alert]>div:last-child button:first-letter {
+	text-transform:uppercase; /*re-capitalises the first letter (all buttons)*/
+}
+
+/********   End of pop-up warnings and errors ********/
+
+/********   Ugly green "complete" box   ********/
+#complete {
+	background-color:#28A197;
+	color:white;
+	text-align:center;
+	padding:38px 1em;
+	margin:1em 0;
+	width:70%;
+}
+
+#complete * {
+	font-size:36px;
+	margin:30px 0;
+}
+
+#complete b ,
+#complete strong {
+	font-weight:bold;
+}
+
+#complete h1{
+	font-size:48px;
+	font-weight:bold;
+}
+
+/********   End of ugly green "complete" box   ********/
+
+/****  Pop-up questions stuff ****/
+.pop-up {
+	border-left: 5px solid #DEE0E2; /*the grey line to the side of the help text*/
+	padding-left: 15px; /*padding to separate the text from the above grey line*/
+}
+/****  End of pop-up questions stuff ****/
+
+/****  Help text stuff ****/
+.help-content {
+	border-left: 5px solid #DEE0E2; /*the grey line to the side of the help text*/
+	padding-left: 15px; /*padding to separate the text from the above grey line*/
+	display:none; /*hides by default - shewn by JS*/
+}
+.help-title {
+	color: #005EA5; /*help text uses H3, so override with colour*/
+	cursor: pointer; /*cursor to little hand*/
+	font-weight: normal; /*debolden*/
+}
+.help-title:hover {
+	color: #2B8CC4; /*hover colour*/
+}
+.help-title:before { /*This is a sideways triangle*/
+	padding-right: 5.58px;
+	content: '► ';
+}
+.activeHelp .help-title:before {
+	content: '▼ ';
+}
+.activeHelp+div .help-content,
+.activeHelpPlus+div>div.opa-control-item .help-content {
+	display:block;
+}
+/****  End of help text stuff ****/
+
+
+/****  Start page button styling  ****/
+
+input.opa-submit[value="Start now"] {
+	font-weight:900!important;
+	padding-right:2.5em!important;
+}
+
+div.startButton::after {
+	content:" ›";
+	position:relative;
+    left: -0.9em;
+    top: 0.15em;
+    font-size: 300%;
+    font-weight: bold;
+	color:white;
+    background: -webkit-linear-gradient(#89bf9d 50%, #fff 50%);
+    background-clip:text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/****  End of start page button styling  ****/
+
+/****  Check your answers styling  ****/
+
+.checkAnswers {
+	display: table;
+	width:100%;
+	max-width:630px;
+}
+
+.checkAnswers div {
+	width:100%;
+	position: relative;
+    border-bottom: 1px solid #bfc1c3;
+	padding:0.6em 0 0.5em;
+}
+
+.checkAnswers div>* {
+	display:inline-block;
+	vertical-align: top;
+	margin: 0;
+}
+
+.cya-question {
+    width: 34%;
+	font-weight: bold;
+	padding-right:1%;
+}
+
+.cya-answer {
+	display:inline-block;
+    width:50%;
+}
+
+.cya-change {
+	display:inline-block;
+    float:right;
+	text-align: right;
+}
+
+.visually-hidden, .visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+/****  End of check your answers styling  ****/
+
+/****  Government banner styling  ****/
+/*
+.header {
+	font-family:nta, Arial, Helvetica, sans-serif;
+	height:60px;
+	color:white;
+	background-color:#0B0C0C;
+}
+.header a {
+	color:white;
+	text-decoration:none;
+	font-weight:bold;
+	font-size: 30px;
+}
+.header a img {
+	padding-top:5px;
+	position:relative;
+	top:5px;
+	
+}
+.header a:hover {
+	border-bottom:1px solid white;
+}
+#colourBar {
+	background-color:green;
+	height:10px;
+}
+*/
+#interview {
+	margin-top:60px;
+	border-top:10px solid #005EA5;
+}
+
+#interview::after {
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	display:block;
+	z-index:1;
+	width:100%;
+	height:60px;
+	background-color:#0b0c0c;
+}
+
+#interview::before {
+	font-family:nta, Arial, Helvetica, sans-serif;
+	background-image: url('${resources-root}/images/org_crest_33px_white.png');
+    background-size: 36px;
+	background-repeat:no-repeat;
+	background-position:0 3px;
+	padding-left:45px;
+	content:"Legal Aid Agency";
+	color:white;
+	position:relative;
+	top:-60px;
+    font-weight:bold;
+	font-size: 30px;
+	z-index:2;
+	white-space: nowrap;
+}
+
+
+/****  End of government banner styling  ****/
+
+/****  Header (beta banner) ****/
+span.devPhase {
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	background-color:#005EA5;
+	padding:4px 8px;
+	margin-right:0.5em;
+}
+#interview header[role=banner] {
+	position:relative;
+	top:-1.25em;
+	line-height:1.4em;
+}
+#interview header[role=banner]+* {
+	border-top:1px solid #bfc1c3; 
+}
+/****  End of header (beta banner) ****/
+
+/****  Footer ****/
+body::after {
+	content:"";
+	z-index:-1;
+	position:absolute;
+	left:0;
+	width:100%;
+	border-top: 1px solid #A1ACB2;
+	background-color: #dee0e2;
+	min-height:185px; 
+}
+.opa-footer {
+	width:100%;
+	border-top: 1px solid #A1ACB2;
+	position:absolute;
+	padding-top: 45px!important; /*style attribute has padding:0.5em to be overridden\*/
+}
+.opa-footer-left {
+	padding-top: 85px;
+}
+.opa-footer-right {
+	text-align: center;
+}
+/****  End of footer ****/
+
+/****  Header/Footer override for embedded rulebases ****/
+body.mainstream.homepage .opa-footer-left,
+body.mainstream.homepage .opa-footer,
+body.mainstream.homepage::after,
+body.mainstream.homepage #interview::before,
+body.mainstream.homepage #interview::after {
+	display:none!important;
+}
+body.mainstream.homepage #interview {
+	margin-top:0;
+	border-top:0;
+}
+
+/****  Header/Footer override for embedded rulebases ****/
