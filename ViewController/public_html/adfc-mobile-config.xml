@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
-    <task-flow-definition id="Interview-task-flow">
-        <default-activity>Interview</default-activity>
-        <managed-bean>
-            <managed-bean-name>interview</managed-bean-name>
-            <managed-bean-class>com.oracle.determinations.mobile.pages.InterviewPage</managed-bean-class>
-            <managed-bean-scope>application</managed-bean-scope>
-        </managed-bean>
-        <managed-bean id="__1">
-            <managed-bean-name>august2016Interview</managed-bean-name>
-            <managed-bean-class>com.oracle.determinations.mobile.pages.August2016InterviewPage</managed-bean-class>
-            <managed-bean-scope>view</managed-bean-scope>
-        </managed-bean>
-        <view id="Interview">
-            <page>/pages/Interview.amx</page>
-        </view>
-    </task-flow-definition>
+	<task-flow-definition id="Interview-task-flow">
+		<default-activity>view1</default-activity>
+		<managed-bean>
+			<managed-bean-name>interview</managed-bean-name>
+			<managed-bean-class>com.oracle.determinations.mobile.pages.InterviewPage</managed-bean-class>
+			<managed-bean-scope>application</managed-bean-scope>
+		</managed-bean>
+		<managed-bean id="__3">
+			<managed-bean-name>integrationBean</managed-bean-name>
+			<managed-bean-class>com.oracle.determinations.mobile.IntegrationBean</managed-bean-class>
+			<managed-bean-scope>application</managed-bean-scope>
+		</managed-bean>
+		<managed-bean id="__4">
+			<managed-bean-name>august2016Interview</managed-bean-name>
+			<managed-bean-class>com.oracle.determinations.mobile.pages.August2016InterviewPage</managed-bean-class>
+			<managed-bean-scope>application</managed-bean-scope>
+		</managed-bean>				
+		<view id="Interview">
+			<page>/pages/Interview.amx</page>
+		</view>
+		<view id="view1">
+			<page>/pages/LaunchPage.amx</page>
+		</view>
+		<control-flow-rule id="__1">
+			<from-activity-id>view1</from-activity-id>
+				<control-flow-case id="__2">
+					<from-outcome>startInterview</from-outcome>
+					<to-activity-id>Interview</to-activity-id>
+				</control-flow-case>
+			</control-flow-rule>
+	</task-flow-definition>
 </adfc-mobile-config>
