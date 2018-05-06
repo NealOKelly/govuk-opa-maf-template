@@ -1,0 +1,10 @@
+#parse( "investigation/controlMessages.vm" )
+<div class="button-group">
+    <div class="buttons">
+        #set($buttonControls = ${control.getControls()} )
+        #foreach( $button in $buttonControls )
+            #set($control = $button)
+            #parse( "controls/${button.getControlType()}.vm" )
+        #end
+    </div>
+</div>

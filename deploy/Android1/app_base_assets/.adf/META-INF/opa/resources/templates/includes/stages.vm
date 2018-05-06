@@ -1,0 +1,120 @@
+#if ((${show-progress-stages} == "true" || ${show-progress-stages} == "True") && ${progress} && ${progress.size()} > 0)
+
+<div id="sidebarToggleButton" class="sidebarToggleButton" onclick="navigationButtonPress()">
+</div>
+<div id="progress-stages" class="progress-stages">
+    #if(${progress-has-stages})
+        <div class="opm-progress-stages">
+            <ul class="list-stages">
+                #foreach($item in ${progress-stages})
+                    #if(${item.isFutureStage()})
+                        #set($progressKind = "order-stage future-stage")
+                    #elseif (${item.isActive()})
+                        #set($progressKind = "order-stage active-stage")
+                    #else
+                        #set($progressKind = "order-stage other-stage")
+                    #end
+
+                    <li class="${progressKind}">
+                        #if(!${item.isFutureStage()})
+                            #set($link = true)
+                            #if(${item.getURL()})
+                                #set($url = ${item.getURL()})
+                            #else
+                                #set($link = false)
+                                #set($url = "")
+                            #end
+                        #else
+                            #set($link = false)
+                        #end
+                        #if($link)
+                        <a class="internalLink" href="$url">
+                        #end
+                        ${item.getTitle()}
+                        #if($link)
+                        </a>
+                        #end
+
+                        #if(${allow-random-access} == "true" && ${item.isComplete()})
+                            <img class="complete-stage" alt="${complete-stage-image-alt}" src="${static-resources-root}/complete.png" />
+                        #end
+                        #if(${item.isActive()})
+                            <ul class="list-screens">
+                                #foreach($item in ${progress-stagescreens})
+                                    #if (${item.isActive()})
+                                        #set($progressKind = "order-screen active-screen")
+                                    #else
+                                        #set($progressKind = "order-screen other-screen")
+                                    #end
+                            
+                                    <li class="${progressKind}">
+                            
+                                        #set($link = true)
+                                        #if(${item.getURL()})
+                                            #set($url = ${item.getURL()})
+                                        #else
+                                            #set($url = "")
+                                            #set($link = false)
+                                        #end
+                                        #if($link)
+                                        <a class="internalLink" href="$url">
+                                        #end
+                                        ${item.getTitle()}
+                                        #if($link)
+                                        </a>
+                                        #end
+
+                                        #if(${allow-random-access} == "true" && ${item.isComplete()})
+                                            <img class="complete-screen" alt="${complete-stage-image-alt}" src="${static-resources-root}/complete.png" />
+                                        #end
+
+                                    </li>
+                                #end
+                            </ul>
+                        #end
+                    </li>
+                #end
+            </ul>
+        </div>
+    #else
+        ## Treat screens listed in progress data structure as stages
+        <div class="opm-progress-stages">
+            <ul class="list-stages">
+            #foreach($item in ${progress-stagescreens})
+                #if (${item.isActive()})
+                    #set($progressKind = "order-stage active-stage")
+                #else
+                    #set($progressKind = "order-stage other-stage")
+                #end
+                            
+                <li class="${progressKind}">
+                    #set($link = true)
+                    #if(${item.getURL()})
+                        #set($url = ${item.getURL()})
+                    #else
+                        #set($url = "")
+                        #set($link = false)
+                    #end
+                    #if($link)
+                    <a class="internalLink" href="$url">
+                    #end
+                    ${item.getTitle()}
+                    #if($link)
+                    </a>
+                    #end
+                    #if(${allow-random-access} == "true" && ${item.isComplete()})
+                        <img class="complete-screen" alt="${complete-stage-image-alt}" src="${static-resources-root}/complete.png" />
+                    #end
+                </li>
+            #end
+            </ul>
+        </div>
+    #end
+</div>
+<div id="progress-stages-mobile" class="progress-stages-mobile">
+    #if(${progress-has-stages})
+        <div><select id="stages-select-mobile" class="active-stage"></select></div>
+    #end
+    <div><select id="screen-select-mobile" class="active-screen"></select></div>
+</div>
+#end

@@ -1,0 +1,185 @@
+<script>
+        try {
+        ${interviews-js-content}   
+        } catch(err) {
+          alert(err);
+        }
+
+        var restyle = window.OraclePolicyAutomation.FindExtension("style");
+        var bodyStyle
+
+        if (restyle && restyle.body) {
+            bodyStyle = restyle.body;
+            if (typeof bodyStyle === 'function') {
+                bodyStyle = bodyStyle();
+            }
+        }
+        
+        if (bodyStyle) {
+            if (bodyStyle.className)
+                document.body.className = bodyStyle.className;
+            if (bodyStyle.style) {
+                for (var k in bodyStyle.style) {
+                    if (bodyStyle.style.hasOwnProperty(k)) {
+                        document.body.style[k] = bodyStyle.style[k];
+                    }
+                }
+            } 
+        } 
+        
+        window.OraclePolicyAutomation.Mobile = true;
+        
+        window.OraclePolicyAutomation["mobileOs"] = "${mobile-os}";
+
+        var mobileMandatoryIconUrl = "${static-resources-root}/mandatory.png";
+               
+        var getResourceImage = function(resourceUri, callback) {
+            if (window.OraclePolicyAutomation["mobileOs"] == "UWP") {
+                adf.mf.el.invoke("#{applicationScope.interview.getResourceImage}", [resourceUri], "", ["java.lang.String"],
+                    function success(thing, dataUri) {
+                        callback(dataUri);
+                    },
+                    function fail() {
+                        console.error("INVOCATION ERROR retrieving resource image " + resourceUri);
+                    }
+                );
+            } else {
+              callback(resourceUri);
+            }
+        };
+        
+        var getAttachmentImage = function(attachmentUri, callback) {
+            adf.mf.el.invoke("#{applicationScope.interview.getAttachmentImage}", [attachmentUri], "", ["java.lang.String"],
+                function success(thing, dataUri) {
+                    callback(dataUri);
+                },
+                function fail() {
+                    console.error("INVOCATION ERROR retrieving attachment image " + attachmentUri);
+                }
+            );
+        };
+        
+        var processCapturedImage = function(fileUri, callback) {
+            adf.mf.el.invoke("#{applicationScope.interview.processCapturedImage}", [fileUri], "", ["java.lang.String"],
+                function success(thing, returnValues) {
+                    var fileSize = returnValues[0];
+                    var newFileUri = returnValues[1];
+                    
+                    // Need a dataUri to display captured image under UWP
+                    var dataUri = null;
+                    if (returnValues.length == 3) {
+                        dataUri = returnValues[2];
+                    }
+                    
+                    callback(fileSize, newFileUri, dataUri);
+                },
+                function fail() {
+                    console.error("INVOCATION ERROR processing captured image " + fileUri);
+                }
+            );
+        };
+        
+        var mafCustomPostHandler = function(url, request, response, options) {
+            // Get goal state from URL
+            var urlTokens = url.split("/");
+            var goalState = urlTokens[urlTokens.length - 1];
+            
+            var jsonRequest = JSON.stringify(request);
+            
+            adf.mf.api.amx.showLoadingIndicator(30000);
+            
+            adf.mf.el.invoke("#{applicationScope.interview.submit}", [goalState, jsonRequest], "", ["java.lang.String", "java.lang.String"],
+                function success(thing, responseJson) {
+                    adf.mf.api.amx.hideLoadingIndicator();
+                    response(JSON.parse(responseJson));
+                },
+                function fail() {
+                    adf.mf.api.amx.hideLoadingIndicator();
+                    console.error("INVOCATION ERROR submitting screen");
+                }
+            );
+        };
+        
+        var getUnsubmittedScreenData = function() {
+            var screenURI = opmInterview.getSession().getScreenURI();
+            // Get goal state from URL
+            var urlTokens = screenURI.split("/");
+            var goalState = urlTokens[urlTokens.length - 1];
+            
+            var postData = opmInterview.getSession().getPartialSubmitPostData();
+            
+            return JSON.stringify({goalState: goalState, postData: postData});
+        }
+        
+        var doExit = function(url) {
+            adf.mf.el.invoke("#{applicationScope.interview.handleExit}", [url], "", ["java.lang.String"],
+                function success(thing) {
+                    // do nothing
+                },
+                function fail() {
+                    console.error("INVOCATION ERROR handling exit");
+                }
+            );
+        }
+
+        var launchLinkInExternalBrowser = function(url) {
+            cordova.InAppBrowser.open(url, "_system", "");
+        }
+</script>
+
+#foreach($stylesheetName in ${extra-css-files.keySet()})
+<style type="text/css">
+$extra-css-files.get($stylesheetName)
+</style>
+#end
+
+#foreach($jsFileName in ${extra-js-files.keySet()})
+<script>
+${extra-js-files.get($jsFileName)}
+</script>
+#end
+
+<link href="${static-resources-root}/interviews.css" rel="stylesheet" type="text/css"/>
+
+<style type="text/css">
+.opa-interview button.opa-file-add-gallery {
+    border: solid 2px gray;
+    margin: 10px 10px 10px 10px;
+    background-image: url(${static-resources-root}/photo_func.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+    width: 75px;
+    height: 75px;
+    vertical-align: top;
+    border-radius: 8px;
+}
+
+.opa-interview button.opa-file-add-camera {
+    border: solid 2px gray;
+    margin: 10px 10px 10px 10px;
+    background-image: url(${static-resources-root}/camera_func.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+    width: 75px;
+    height: 75px;
+    vertical-align: top;
+    border-radius: 8px;
+}
+
+.interviewContent {
+    font-size: large;
+}
+</style>
+
+<div id="interview"></div>
+<script>
+        var data = ${page-json};
+
+        var opmInterview = OraclePolicyAutomation.Initialize({url: location.href, config: data, el: document.getElementById("interview"), customPostHandler: mafCustomPostHandler}, function(kind, param) {
+            if (kind === "redirect") {
+                doExit(param["location"]);
+            }
+        });
+</script>

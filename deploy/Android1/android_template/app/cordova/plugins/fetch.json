@@ -1,0 +1,10 @@
+{
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Oracle\\JDeveloper\\Oracle_Home\\jdeveloper\\jdev\\extensions\\oracle.maf\\CordovaPlugins\\cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    }
+}

@@ -1,0 +1,13 @@
+## Put up a list of errors and warnings for a screen, which may or may not be an interview screen
+#if(${screen.getErrors().size()} > 0 || ${screen.getWarnings().size()} > 0)
+    <div id="messages" class="messages">
+    #foreach( $error in ${screen.getErrors()} )
+        #set( $errorCondition = $error )
+        #parse( "investigation/error.vm" )
+        #end
+    #foreach( $error in ${screen.getWarnings()} )
+        #set( $errorCondition = $error )
+        #parse( "investigation/warning.vm" )
+        #end
+    </div>
+#end

@@ -1,0 +1,283 @@
+#if(!${control.getInputType().equals("checkbox")})
+    #if(${attrLabelClasses})
+        #set($extraClasses = $attrLabelClasses)
+    #else
+        #set($extraClasses = "")
+    #end
+
+<div class="question ${extraClasses}">
+    <label id="lbl-${control.getEncodedID()}">${control.getText()}</label>
+    #if(${mandatory-icon})
+        #if(!${control.isMandatory()})
+            #set($displayStyle = "display: none" )
+        #else
+            #set($displayStyle = "")
+        #end
+        #if(${mandatory-icon-external} == "true")
+                    <span class="mandatory glyphicon glyphicon-certificate" style="$displayStyle"></span>
+                    <!-- img class="mandatory" src="${mandatory-icon}" alt="${mandatory-icon-alt-text}" style="$displayStyle"/ -->
+                #else
+                    <span class="mandatory glyphicon glyphicon-certificate" style="$displayStyle"></span>
+                    <!-- img class="mandatory" src="${resources-root}/images/${mandatory-icon}" style="$displayStyle"
+                         alt="${mandatory-icon-alt-text}"/ -->
+                #end
+            #end
+        </div>
+    #end
+
+    #if(${control.isInvalid()})
+    #set( $invalidState = "true")
+#else
+    #set( $invalidState = "false")
+#end
+
+#if(!${control.isVisible()})
+    #set($hiddenState = "true")
+    #set($disabledState = "false")
+    #set($requiredState = "false")
+#elseif(${control.isReadOnly()})
+    #set($hiddenState = "false")
+    #set($disabledState = "true")
+    #set($requiredState = "false")
+#elseif(${control.isMandatory()})
+    #set($hiddenState = "false")
+    #set($disabledState = "false")
+    #set($requiredState = "true")
+#else
+    #set($hiddenState = "false")
+    #set($disabledState = "false")
+    #set($requiredState = "false")
+#end
+    
+#parse( "investigation/controlMessages.vm" )
+
+#if( $control.isReadOnly() )
+    #set( $readOnlyString = "readonly" )
+    #set( $disabledString = "disabled" )
+#else
+    #set( $readOnlyString = "" )
+    #set( $disabledString = "")
+#end
+
+    #if($control.getInputType().equals("checkbox"))
+        #if( $control.isTrue() )
+            #set( $checkedString = "checked" )
+        #else
+            #set( $checkedString = "" )
+        #end
+
+        <div class="control-checkbox">
+            #if(${attrLabelClasses})
+                #set($extraClasses = $attrLableClasses)
+            #else
+                #set($extraClasses = "")
+            #end
+
+            ##check boxes always end up with a value and have special label rendering
+            
+            <input type="checkbox" name="${control.getId()}" id="${control.getEncodedID()}" ${disabledString}
+                   value="true" ${checkedString} class="owd-input"
+                   aria-hidden="${hiddenState}" aria-disabled="${disabledState}"
+                   aria-invalid="${invalidState}" aria-labelledby="lbl-${control.getEncodedID()}"
+                   aria-describedBy="msg-${control.getEncodedID()}">
+            <label class="question ${extraClasses}" for="${control.getEncodedID()}"
+                   id="lbl-${control.getEncodedID()}"><span></span>${control.getText()}</label>
+        </div>
+    #else
+        <div class="control">
+        #if(${control.getInputType().equals("Radiobutton")})
+            #if(${control.getControlType().equals("BooleanInputControl")})
+            ##booleans have their groups rendered differently
+                <div class="radio-group-boolean" role="radiogroup" aria-labelledby="lbl-${control.getEncodedID()}"
+                     aria-hidden="${hiddenState}" aria-disabled="${disabledState}"
+                     aria-invalid="${invalidState}"
+                     aria-required="${requiredState}"
+                     aria-describedBy="msg-${control.getEncodedID()}">
+                    <input class="owd-input" type="radio" name="${control.getId()}" id="${control.getEncodedID()}t" ${disabledString}
+                           value="true"
+                           aria-labelledby="lbl-${control.getEncodedID()}t"
+                        #if(${control.isTrue()})
+                           checked
+                        #end
+                            ><label for="${control.getEncodedID()}t" id="lbl-${control.getEncodedID()}t"><span></span>${boolean-true}</label>
+    
+                    <input class="owd-input" type="radio" name="${control.getId()}" id="${control.getEncodedID()}f" ${disabledString}
+                           value="false"
+                           aria-labelledby="lbl-${control.getEncodedID()}f"
+                        #if(${control.isFalse()})
+                           checked
+                        #end
+                            ><label for="${control.getEncodedID()}f" id="lbl-${control.getEncodedID()}f"><span></span>${boolean-false}</label>
+    
+                    #if(${control.isMandatory()})
+                        #set($displayStyle = "display: none" )
+                        #set($hiddenFlag = "hiddenFlag")
+                    #else
+                        #set($displayStyle = "")
+                        #set($hiddenFlag = "")
+                    #end
+    
+                    <input class="owd-input $hiddenFlag" type="radio" name="${control.getId()}" id="${control.getEncodedID()}u" ${disabledString}
+                           value="" style="$displayStyle"
+                           aria-labelledby="lbl-${control.getEncodedID()}u"
+                        #if( ${control.isUncertain()} )
+                           checked
+                        #end
+                            ><label for="${control.getEncodedID()}u" style="$displayStyle" id="lbl-${control.getEncodedID()}u"><span></span>${boolean-uncertain}</label>
+    
+                </div>
+            #else
+                <div role="radiogroup" aria-labelledby="lbl-${control.getEncodedID()}"
+                     aria-hidden="${hiddenState}" aria-disabled="${disabledState}"
+                     aria-invalid="${invalidState}"
+                     aria-required="${requiredState}"
+                     aria-describedBy="msg-${control.getEncodedID()}"
+                     class="radio-group-list"
+                >
+                    #foreach( $listValue in ${control.getListOptions()} )
+                        #if(${listValue.isVisible()})
+                            <input class="owd-input" type="radio" name="${control.getId()}"
+                                   id="${control.getEncodedID()}${velocityCount}" ${disabledString} value="${listValue.getValue()}"
+                                   aria-labelledby="lbl-${control.getEncodedID()}${velocityCount}"
+                                #if(${control.isSelectedCodeValue(${listValue.getRawValue()})})
+                                   checked
+                                #end
+                                    /><label for="${control.getEncodedID()}${velocityCount}" id="lbl-${control.getEncodedID()}${velocityCount}"><span></span>$listValue.getDisplayText()</label><br/>
+                        #end
+                    #end
+                </div>
+            #end
+        #elseif(${control.getInputType().equals("Dropdown")} || ${control.getInputType().equals("searching-combo")} || ${control.getInputType().equals("Listbox")})
+            #if(${control.getInputType().equals("Listbox")})
+                #set($size = ${control.getListOptions().size()})
+            #else
+                #set($size = 1)
+            #end
+    
+            <div class="select-style-dropdown" style="max-width:${control.getInnerWidth()}">
+            <select id="${control.getEncodedID()}"
+                    name="${control.getId()}" ${disabledString} size="$size"
+                    class="owd-input list-input" aria-invalid="${invalidState}"
+                    aria-hidden="${hiddenState}" aria-disabled="${disabledState}" aria-required="${requiredState}"
+                    aria-labelledby="lbl-${control.getEncodedID()}" aria-describedBy="msg-${control.getEncodedID()}">
+                #foreach( $listValue in ${control.getListOptions()} )
+                    #if(${listValue.isVisible()})
+                        #if(${control.isSelectedCodeValue(${listValue.getRawValue()})})
+                            #set($selected = "selected")
+                        #else
+                            #set($selected = "")
+                        #end
+    
+                        ##apparently display text for options in required selects can not be empty
+                        #if(${listValue.getDisplayText()} == "")
+                            #set($displayText = "&nbsp;")
+                        #else
+                            #set($displayText = ${listValue.getDisplayText()})
+                        #end
+    
+                        <option $selected value="${listValue.getValue()}">$displayText</option>
+    
+                    #end
+                #end
+            </select>
+            </div>
+        #elseif(${control.getInputType().equals("dmy-inputs")})
+            #set ($dayId = ${encoder.elementIdEncode(${control.getRawDayId()})})
+            #set ($monthId = ${encoder.elementIdEncode(${control.getRawMonthId()})})
+            #set ($yearId = ${encoder.elementIdEncode(${control.getRawYearId()})})
+    
+            <div role="group" aria-labelledby="lbl-${control.getEncodedID()}"
+                 aria-hidden="${hiddenState}" aria-disabled="${disabledState}"
+                 aria-invalid="${invalidState}"
+                 aria-describedBy="msg-${control.getEncodedID()}">
+                #foreach($part in ${control.getMultiInputFormat()})
+                    #if($part == "d")
+                        #set($counter = 0)
+    
+                        <div class="dmy-dropdown">
+                        <label class="owd-accessible-hidden"
+                               id="lbl-$dayId">${day-selection-alt}</label>
+                        <select id="$dayId" name="${control.getDayId()}" ${disabledString} class="dmy-inputs-day"
+                                aria-required="${requiredState}"
+                                aria-labelledby="lbl-$dayId" >
+                            #foreach($opt in ${control.getDayList()})
+                                #if($opt == "")
+                                    #set($displayTxt = "&nbsp;")
+                                #else
+                                    #set($displayTxt = $opt)
+                                #end
+                                <option value=$counter
+                                    #if($counter == ${control.getDayValue()})
+                                            selected
+                                    #end
+                                        >$displayTxt</option>
+                                #set($counter = $counter + 1)
+                            #end
+                        </select>
+                        </div>
+                    #elseif($part == "m")
+                        #set($counter = 0)
+                        <div class="dmy-dropdown">
+                        <label class="owd-accessible-hidden"
+                               id="lbl-$monthId">${month-selection-alt}</label>
+                        <select id="$monthId" name="${control.getMonthId()}" ${disabledString} class="dmy-inputs-month"
+                                aria-required="${requiredState}"
+                                aria-labelledby="lbl-$monthId">
+                            #foreach($opt in ${control.getMonthList()})
+                                <option value=$counter
+                                    #if($opt == "")
+                                        #set($displayTxt = "&nbsp;")
+                                    #else
+                                        #set($displayTxt = $opt)
+                                    #end
+    
+                                    #if($counter == ${control.getMonthValue()})
+                                            selected
+                                    #end
+                                        >$displayTxt</option>
+                                #set($counter = $counter + 1)
+                            #end
+                        </select>
+                        </div>
+                    #elseif($part == "y")
+                        <label class="owd-accessible-hidden" id="lbl-$yearId">${year-selection-alt}</label>
+                        <input name="${control.getYearId()}" type="text" id="${yearId}" ${readOnlyString}
+                               value="${control.getYearValue()}" size="4" class="dmy-inputs-year"
+                               aria-required="${requiredState}"
+                               aria-labelledby="lbl-$yearId" placeholder="${control.getYearHintText()}">
+                    #end
+                #end
+            </div>
+        #elseif(${control.getInputType().equals("Calendar")})
+          <div class="select-style-calendar" style="max-width:${control.getInnerWidth()}">
+            <input type="date" id="${control.getEncodedID()}" name="${control.getId()}" ${readOnlyString}
+                   value="${html5-date-formatter.format(${control.getRawDisplayValue()})}" size="${text-control-width}"
+                   class="owd-input calendar" aria-invalid="${invalidState}"
+                   aria-hidden="${hiddenState}" aria-disabled="${disabledState}" aria-required="${requiredState}"
+                   aria-labelledby="lbl-${control.getEncodedID()}" aria-describedBy="msg-${control.getEncodedID()}">
+          </div>
+        #elseif(${control.getInputType().equals("text-area")})
+            <textarea rows="${multi-line-rows}" cols="${multi-line-cols}" style="max-width:${control.getInnerWidth()}"
+                      id="${control.getEncodedID()}" name="${control.getId()}" ${readOnlyString}
+                      class="owd-input" aria-invalid="${invalidState}" aria-labelledby="lbl-${control.getEncodedID()}"
+                      aria-hidden="${hiddenState}" aria-disabled="${disabledState}" aria-required="${requiredState}"
+                      aria-describedBy="msg-${control.getEncodedID()}"
+                      
+            #if(${control.showHintText()})
+                       placeholder="${control.getHintText()}"
+            #end      
+                      >${control.getDisplayValue()}</textarea>
+        #else
+            ##by default render a text box
+                <input type="text" style="max-width:${control.getInnerWidth()}" id="${control.getEncodedID()}"
+                       name="${control.getId()}" ${readOnlyString} value="${control.getDisplayValue()}"
+                       size="${text-control-width}" class="owd-input" aria-invalid="${invalidState}"
+                       aria-hidden="${hiddenState}" aria-disabled="${disabledState}" aria-required="${requiredState}"
+                       aria-labelledby="lbl-${control.getEncodedID()}" aria-describedBy="msg-${control.getEncodedID()}"
+            #if(${control.showHintText()})
+                       placeholder="${control.getHintText()}" 
+            #end
+                        >
+        #end
+    </div>
+    #end

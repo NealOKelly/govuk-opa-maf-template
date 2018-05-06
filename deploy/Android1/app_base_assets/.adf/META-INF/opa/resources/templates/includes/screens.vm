@@ -1,0 +1,34 @@
+#if ((${show-progress-stages} == "true" || ${show-progress-stages} == "True") && ${progress} && ${progress.size()} > 0)
+
+<div id="progress-screens" class="progress-screens opm-progress-screens">
+<ul>
+    #foreach($item in ${progress-stagescreens})
+        #if (${item.isActive()})
+            #set($progressKind = "order-screen active-screen")
+        #else
+            #set($progressKind = "order-screen other-screen")
+        #end
+
+        <li class="${progressKind}">
+
+            #set($link = true)
+            #if(${item.getURL()})
+                #set($url = ${item.getURL()})
+            #else
+                #set($url = "")
+                #set($link = false)
+            #end
+            #if($link)
+            <a class="internalLink" href="$url">
+            ##<a href="#" onclick="get('$url');">
+            #end
+            ${item.getTitle()}
+            #if($link)
+            </a>
+            #end
+        </li>
+    #end
+</ul>
+</div>
+
+#end

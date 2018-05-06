@@ -1,0 +1,9 @@
+#if( ${control.isEnabled()} )
+    #set( $disabledString = "" )
+#else
+    #set( $disabledString = "disabled" )
+#end
+    
+#parse( "investigation/controlMessages.vm" )
+<button class="${control.getButtonClass()}" id="${control.getEncodedID()}" name="${control.getId()}" type="submit" value="clicked" tabindex="#tabIndex()" $disabledString>${control.getText()}</button>
+

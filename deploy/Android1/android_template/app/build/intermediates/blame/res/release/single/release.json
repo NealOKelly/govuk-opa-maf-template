@@ -1,0 +1,662 @@
+[
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_back.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\menu_more_rearrange_menu.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\menu\\more_rearrange_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_http_auth_challenge.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_http_auth_challenge.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ic_menu_show_navbar.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-hdpi-v4\\ic_menu_show_navbar.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_stop_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_stop_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_ic_menu_preferences.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-mdpi-v4\\ic_menu_preferences.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_more_page.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_more_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-xxhdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-land-xxhdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\menu_goto_springboard_menu.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\menu\\goto_springboard_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_action_next_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-hdpi\\ic_action_next_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-ldpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-land-ldpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\xml_config.xml.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\xml\\config.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_main.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_stop_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_stop_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ic_menu_springboard.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-hdpi-v4\\ic_menu_springboard.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_action_next_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-xxhdpi\\ic_action_next_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_text_round_corner.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\text_round_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_action_remove.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-hdpi\\ic_action_remove.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-mdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-land-mdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_btn_refresh.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\btn_refresh.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_webview_navigation_bar_gradient.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\webview_navigation_bar_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_next_btn_disabled_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\next_btn_disabled_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_next_btn_pressed_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\next_btn_pressed_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_button_round_corner.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\button_round_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_secured_feature.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\secured_feature.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_icon_background.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_back_btn_pressed_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\back_btn_pressed_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_action_next_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-mdpi\\ic_action_next_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_template_custom_big.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_information.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_information.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4_ic_menu_preferences.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-ldpi-v4\\ic_menu_preferences.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_dialog_alert.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_dialog_alert.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-ldpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-port-ldpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4_ic_menu_rearrange.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-ldpi-v4\\ic_menu_rearrange.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_tab_more_selected.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\ic_tab_more_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_certificate.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_certificate.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ic_menu_preferences.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-hdpi-v4\\ic_menu_preferences.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_reload_btn_andl_disabled.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\reload_btn_andl_disabled.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_stop.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_stop.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_part_time.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-xhdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-port-xhdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_forward.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_forward.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_forward_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_forward_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_refresh.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_action_remove.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-mdpi\\ic_action_remove.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_action_previous_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-xhdpi\\ic_action_previous_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_adfmf_icon.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-hdpi\\adfmf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_login_page.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_progressview.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_progressview.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-xxhdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-port-xxhdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout-v16_notification_template_custom_big.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\xml_filepaths.xml.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\xml\\filepaths.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-v21_notification_action_background.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_lifecycle_shutdown.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_lifecycle_shutdown.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_next_btn_normal_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\next_btn_normal_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_tab_more_unselected.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\ic_tab_more_unselected.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_certificate_list_row.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_certificate_list_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_more_titlebar_repeatable.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\bg_more_titlebar_repeatable.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-hdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-land-hdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_reload_btn_normal_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\reload_btn_normal_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_icon_group.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_webview_refresh_selector.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\webview_refresh_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ic_menu_hide_navbar.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-hdpi-v4\\ic_menu_hide_navbar.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_media.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_more_titlebar_background.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\more_titlebar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_lines_media.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_dialog_alert.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_dialog_alert.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_tile_bg.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_action_previous_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-mdpi\\ic_action_previous_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_more_action_panel_background.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\more_action_panel_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_back_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_back_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_forward.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_forward.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_bg_leather_repeatable.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\bg_leather_repeatable.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_client_cert_system_footer.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_client_cert_system_footer.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_bg.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_adfmf_icon.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-mdpi\\adfmf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_adfmf_icon.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-xxxhdpi\\adfmf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_challenge.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_challenge.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_client_cert_dialog.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_client_cert_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_reload_btn_andl_generic.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\reload_btn_andl_generic.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_webview_stop_selector.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\webview_stop_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_forward_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_forward_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_action_remove.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-xhdpi\\ic_action_remove.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_stop.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_stop.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_next_btn_andl_generic.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\next_btn_andl_generic.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_btn_back.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\btn_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_adfmf_icon.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-ldpi\\adfmf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_btn_forward.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\btn_forward.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_configsrvc_credentials_no_tenant.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_configsrvc_credentials_no_tenant.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_webview_forward_selector.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\webview_forward_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_adfmf_icon.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-xhdpi\\adfmf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_reload_btn_pressed_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\reload_btn_pressed_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-hdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-port-hdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_back_btn_andl_generic.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\back_btn_andl_generic.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_template_icon_group.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_back_btn_normal_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\back_btn_normal_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_back.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_sslwarning.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_sslwarning.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_refresh.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_action_next_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-xhdpi\\ic_action_next_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_certificate.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_certificate.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_adfmf_icon.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-xxhdpi\\adfmf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_action_previous_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-hdpi\\ic_action_previous_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_refresh_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_refresh_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_ic_more_drag_unselected.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\ic_more_drag_unselected.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_log_text_view.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_log_text_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_popup_menu_item_layout.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_webview.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_webview.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_dialog_alert.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_dialog_alert.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_back_btn_disabled_control.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\back_btn_disabled_control.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_back_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_back_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_background_splash.xml.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable\\background_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_login_webview.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_login_webview.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\ab7f57ea3dc3b139c9df384640676461\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_back_btn_andl_disabled.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\back_btn_andl_disabled.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_action_previous_item.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-xxhdpi\\ic_action_previous_item.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_webview_address_bar_shadow.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\webview_address_bar_shadow.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_ic_menu_rearrange.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-mdpi-v4\\ic_menu_rearrange.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_action_remove.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\res\\drawable-xxhdpi\\ic_action_remove.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_forward_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_forward_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_ic_menu_rearrange.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable-hdpi-v4\\ic_menu_rearrange.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_oamms_basicauth.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\layout\\oamms_basicauth.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_more_tab_selector.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\more_tab_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_stop.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_stop.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_configsrvc_credentials.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_configsrvc_credentials.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_refresh_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_refresh_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_oracle_access_ic_back.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-mdpi-v4\\oracle_access_ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_stop_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_stop_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_webview_back_selector.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\webview_back_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_refresh.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_indicator_input_error.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable\\indicator_input_error.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_adfmf_blank_activity.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\layout\\adfmf_blank_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-mdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-port-mdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_action.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_part_chronometer.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_refresh_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_refresh_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_bg_low.xml.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\d745eda26daa51ec5e9ab3c8bb5261b3\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_oracle_access_ic_back_pressed.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-xhdpi-v4\\oracle_access_ic_back_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable_next_btn_andl_disabled.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\Container.aar\\9fbc04c712c76bb46dbc811a701ddf11\\res\\drawable\\next_btn_andl_disabled.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-xhdpi_adfmf_loading.9.png.flat",
+        "source": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\app_android_resources\\drawable-land-xhdpi\\adfmf_loading.9.png"
+    },
+    {
+        "merged": "C:\\Users\\nealo\\OneDrive\\Development\\git-repos\\laa\\govuk_opa_maf_template\\deploy\\Android1\\android_template\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_oracle_access_ic_forward.png.flat",
+        "source": "C:\\Users\\nealo\\.gradle\\caches\\transforms-1\\files-1.1\\IDMMobileSDK.aar\\4590b7d79653543686c68b636a7ca399\\res\\drawable-hdpi-v4\\oracle_access_ic_forward.png"
+    }
+]

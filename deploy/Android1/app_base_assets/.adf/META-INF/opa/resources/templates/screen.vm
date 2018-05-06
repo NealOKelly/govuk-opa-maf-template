@@ -1,0 +1,34 @@
+##basic template for all screens
+
+#set($images-base-path = "${rulebase-static-resources-root}/images/")
+
+#if( ${pagedir-right-to-left} == "true" || ${pagedir-right-to-left} == "True" )
+    #set($pagedirString = "rtl")
+#else
+    #set($pagedirString = "ltr")
+#end
+
+#if(${screen})
+    #set($page-title = "${screen.getTitle()} - ${header-title}")
+#else
+    #set($page-title = "${header-title}")
+#end
+
+<div id="interviewScreenObjects" style="display:none">
+    #parse("includes/json-screen-object.vm")
+</div>
+
+<div id="wrapper" class="wrapper">
+    ##parse("includes/header.vm") - Don't show the header as we don't currently support header images.
+    #parse("includes/status-bar.vm")
+    #parse("includes/stages.vm")
+    <div id="content" class="content $screen.getTitle()">
+        #parse("includes/progress-indicator.vm")
+        #parse("includes/${screen-content-template}")
+        ##<input type="button" value="Source" onclick="var source=document.documentElement.outerHTML; alert(source); Log.info(source); return false;">
+    </div>
+</div>
+    #parse("includes/footer.vm")
+
+##This is the indication that the the AMX page is done loading #{applicationScope.interview.html}
+<img id="tinyGif" style="display:none" src="css/images/enabledTextFieldSpringboard.png" onload="initScreen();" />

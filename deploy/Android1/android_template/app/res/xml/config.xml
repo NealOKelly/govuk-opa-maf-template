@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.helloCordova" version="2.0.0" xmlns="http://www.w3.org/ns/widgets">
+    <access origin="*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="useBrowserHistory" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="loadInWebView" value="true" />
+    <feature name="ADFMobileDeviceProperties">
+        <param name="android-package" value="oracle.adfmf.phonegap.ADFMobileDeviceProperties" />
+    </feature>
+    <feature name="AdfmfSlidingWindowPlugIn">
+        <param name="android-package" value="oracle.adfmf.phonegap.AdfmfSlidingWindowPlugIn" />
+    </feature>
+    <feature name="ADFMobileShell">
+        <param name="android-package" value="oracle.adfmf.phonegap.ADFMobileShell" />
+    </feature>
+    <feature name="ADFMobileFeatures">
+        <param name="android-package" value="oracle.adfmf.phonegap.ADFMobileFeatures" />
+    </feature>
+    <feature name="MafLocalNotification">
+        <param name="android-package" value="oracle.adfmf.framework.localnotification.MafNativeLocalNotificationPlugin" />
+    </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
+    </feature>
+    <feature name="MafLegacyWhitelist">
+        <param name="android-package" value="oracle.adfmf.phonegap.MafLegacyWhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+</widget>

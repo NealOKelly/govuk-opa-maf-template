@@ -1,0 +1,42 @@
+-injars 'C:\Users\nealo\OneDrive\Development\git-repos\laa\govuk_opa_maf_template\deploy\Android1\android_template\app\build\intermediates\transforms\jarMerging\release\0.jar'
+-outjars 'C:\Users\nealo\OneDrive\Development\git-repos\laa\govuk_opa_maf_template\deploy\Android1\android_template\app\build\intermediates\multi-dex\release\componentClasses.jar'
+
+-libraryjars 'C:\Users\nealo\AppData\Local\Android\Sdk\build-tools\27.0.3\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontnote **
+-dontwarn **
+-printconfiguration 'C:\Users\nealo\OneDrive\Development\git-repos\laa\govuk_opa_maf_template\deploy\Android1\android_template\app\build\intermediates\multi-dex\release\components.flags'
+
+
+# Referenced at C:\Users\nealo\OneDrive\Development\git-repos\laa\govuk_opa_maf_template\deploy\Android1\android_template\app\build\intermediates\manifests\full\release\AndroidManifest.xml:20
+-keep class com.govuk.mobile.opa.MafApplication {
+    <init>(...);
+}
+
+-keep public class * extends android.app.Instrumentation {
+    <init>();
+}
+
+-keep public class * extends android.app.Application {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.tools.ir.** {
+    <fields>;
+    <methods>;
+}

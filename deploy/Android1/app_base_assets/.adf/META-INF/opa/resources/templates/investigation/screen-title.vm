@@ -1,0 +1,10 @@
+	#if (${validCommentaryTarget} &&  ${screen.hasCommentary()})
+		#set ( $commentaryExists = ${screen.hasCommentary()})
+		#set ( $commentaryURL = ${screen.getCommentaryURL()})
+    	<a class="screen-commentary-link" href="$commentaryURL" target="${commentaryTarget}">
+    		${screen.getTitle()}
+    	</a>
+	#else
+    	$screen.getTitle()
+	#end
+

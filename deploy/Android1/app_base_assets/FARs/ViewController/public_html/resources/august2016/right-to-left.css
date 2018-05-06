@@ -1,0 +1,155 @@
+/****** Additional Styles for right-to-left languages. Should be included after main.css ******/
+
+#header .left,
+#header .content,
+#header .right {
+    float:right;
+}
+#header .left {
+    padding-left: 7px;
+    padding-right: 20px;
+}
+#menu .left,
+#menu .content{
+    float: right;
+}
+#menu .right {
+    float:left;
+    text-align:left;
+    padding-left: 20px;
+}
+#menu .navigation {
+    padding-right: 20px;
+}
+#status .left,
+#status .content,
+#status .right
+{
+    float: right;
+    overflow: hidden;
+    padding-top: .2em;
+}
+#status .right {
+    float:left;
+    text-align:left;
+    padding-left: 20px;
+}
+
+#status-info{
+    float: left;
+    padding-right: 7px;
+    padding-left: 0px
+}
+
+#progress-bar{
+    float : left;
+}
+
+
+#footer {
+    clear:both;
+    float:right;
+    width:100%;
+}
+#footer .left,
+#footer .content,
+#footer .right
+{
+    float: right;
+}
+#footer .left {
+    padding-right: 20px;
+}
+#footer .right {
+    text-align: left;
+    padding-left: 20px;
+    float: left;
+}
+
+
+/** Main templates **/
+
+#investigation form {
+    padding-right: 10px;
+}
+#investigation {
+    padding: 0 20px 0 0;
+}
+.system-error {
+    padding-right: 15%;
+}
+#confirm-end-session-text {
+    margin-right: -10%;
+}
+#messages p {
+    margin: 5px 15px 5px 5px;
+}
+
+/** Layout for portrait entity entry */
+.entity-instance-group .question, .entity-instance-group {
+    text-align: right;
+}
+.entity-instance-group .control input[type="checkbox"] {
+    text-align: right;
+}
+
+
+.column {
+    float: right;
+}
+
+/* To Many relationship collect control */
+.relationship-control .question {
+    float: right;
+    text-align: right;
+}
+.relationship-control .spacer {
+    float: right;
+}
+.relationship-targets {
+    text-align: right;
+    float: left;
+}
+
+/* Decision report and summary screen */
+.help {
+    padding-right: 40px;
+}
+
+/* Data Review */
+.data-review-item .data-review-input-text {
+    float: right;
+    text-align: right;
+}
+.data-review-item .data-review-input-value {
+    float: right;
+    text-align: right;
+    padding-right: 10px;
+}
+.nodeicon {
+    float: right;
+}
+.data-review-folder-item .folder-name {
+    float: right;
+}
+li .data-review-input-text {
+    padding-right: 0px;
+}
+.expanded ul {
+    padding-right: 15px; /* increased to 15px from LTR's 10px */
+}
+ul.datareview li img {
+    padding-left: 5px;
+}
+
+/* Decision Report */
+ul.decisionreport li img {
+    margin-left: 5px;
+}
+
+/* fixes radio button alignment in FF */
+.radio-group label{
+    text-align: right;
+}
+
+

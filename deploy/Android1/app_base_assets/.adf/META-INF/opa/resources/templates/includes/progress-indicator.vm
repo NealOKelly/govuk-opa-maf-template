@@ -1,0 +1,16 @@
+<div class="progress-indicator">
+    #if(${progress-has-stages})
+        <ol class="progress-indicator-list">
+            #set($progressItemWidth = 100 / $progress-stages.size())
+            #foreach($item in ${progress-stages})
+                #if(${item.isFutureStage()})
+                    #set($progressKind = "progress-todo")
+                #else
+                    #set($progressKind = "progress-done")
+                #end
+
+                <li class="${progressKind}" style="width: ${progressItemWidth}%" />
+            #end
+        </ol>
+    #end            
+</div>

@@ -1,0 +1,2 @@
+#parse( "investigation/controlMessages.vm" )
+<div id="${control.getEncodedID()}" ${classAttribute} ${styleAttribute}>#parse ( "investigation/Link.vm" )</div>

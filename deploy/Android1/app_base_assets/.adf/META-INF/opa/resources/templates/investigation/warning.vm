@@ -1,0 +1,6 @@
+#if(${msgClasses})
+    #set($moreClasses = $msgClasses)
+#else
+    #set($moreClasses = "")
+#end
+<p class="warning $moreClasses">${errorCondition}</p>

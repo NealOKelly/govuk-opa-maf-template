@@ -1,0 +1,33 @@
+## Standard header
+## HTML Comments should be commented out when not debugging
+## <!-- begin header -->
+#if( ${hide-header} != "true" && ${hide-header} != "True")
+<div id="header" class="header">
+    #if( ${show-application-name} == "true" || ${show-application-name} == "True" )
+        #set($inlineClass = " header-inline")
+    #else
+        #set($inlineClass = "")
+    #end
+    <div class="header-image ${inlineClass}">
+        #if("$!{header-image-link}" != "") <a href="${header-image-link}"> #end
+        #if( ${show-header-image} == "true" || ${show-header-image} == "True" )
+            <img
+                #if(${header-image-external} == "true")
+                     alt="${header-alt}" src="${header-image}"
+                #else
+                    alt="${header-alt}" src="${images-base-path}${header-image}"
+                #end
+                #if( ${show-header-image-title} == "true" || ${show-header-image-title} == "True" )
+                             title="${header-title}"
+                #end
+            >
+        #end
+        #if("$!{header-image-link}" != "") </a> #end
+    </div>
+    #if( ${show-application-name} == "true" || ${show-application-name} == "True" )
+        <div class="header-text application-name ${inlineClass}">
+            ${application-name}
+        </div>
+    #end
+</div>
+#end

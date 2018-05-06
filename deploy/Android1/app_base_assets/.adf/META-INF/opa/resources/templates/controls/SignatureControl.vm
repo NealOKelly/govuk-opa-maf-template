@@ -1,0 +1,28 @@
+#parse( "investigation/controlMessages.vm" )
+<div class="question"><label for="${control.getEncodedID()}">${control.getText()}</label></div>
+
+<div class="control">
+    #if(${control.getSignature()} || ${control.isReadOnly()})
+        <div id="existing_image_${attach.getId()}" class="existing-image-attachment">
+                <input type="hidden" name="SIGNATURE_${control.getId()}" value="0"/>
+                <img src="${control.getAsDataURL()}" />
+        </div>
+    #end
+    
+    <div id="new_signature_wrapper_${control.getId()}" class="new-signature-wrapper">
+            
+    </div>
+
+    #if(${control.getSignature()} || ${control.isReadOnly()})
+    <div class="sigPad" id="signature_${control.getId()}" style="display:none">
+    #else
+    <div class="sigPad" id="signature_${control.getId()}">
+    #end
+      <div class="sig sigWrapper">
+        <div class="typed"></div>
+        <canvas class="pad" height="200" style="display:block; position:relative;"></canvas>
+      </div>
+    </div>
+    
+    <button class="clear-signature-button" onclick="clearDrawnSignature('signature_${control.getId()}'); return false;" type="button">Clear</button>
+</div>

@@ -1,0 +1,17 @@
+## Display errors and warnings for a control.
+## These should be displayed even if the control itself is hidden.
+## Normally a hidden control will not have any errors or warnings, but if it does the application
+## is likely to stop working altogether, and in that case it is nice to give some clue as to
+## what is going wrong.
+#if(!${supressMessages} && (${control.getErrorMessages().size()} > 0 || ${control.getWarningMessages().size()} > 0))
+<div class="messages">
+    #foreach( $error in ${control.getErrorMessages()} )
+        #set( $errorCondition = $error )
+        #parse( "investigation/error.vm" )
+        #end
+    #foreach( $error in ${control.getWarningMessages()} )
+        #set( $errorCondition = $error )
+        #parse( "investigation/warning.vm" )
+        #end
+</div>
+#end

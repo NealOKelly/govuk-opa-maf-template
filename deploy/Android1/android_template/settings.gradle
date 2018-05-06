@@ -1,0 +1,4 @@
+include ':app'
+include ':Container'
+include ':Cordova'
+include ':IDMMobileSDK'

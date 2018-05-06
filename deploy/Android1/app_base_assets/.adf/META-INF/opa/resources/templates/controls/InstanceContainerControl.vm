@@ -1,0 +1,139 @@
+##sets the variable $entInstClass based on the index of the entity instance
+##NOTE: Index is 1 based
+#macro(setEntInstClass $instIdx)
+   #set($idxModulo = $instIdx % 2)
+   #if($idxModulo == 0)
+       #set($entInstClass = "eig-even")
+   #else
+       #set($entInstClass = "eig-odd")
+   #end
+#end
+
+#parse( "investigation/controlMessages.vm" )
+#if( $control.getControlType() == "ContainmentRelationshipControl")
+    #set($collectControls = ${control.getInstanceControls()} )
+    #set($addControl = ${control.getAddButtonGroup()} )
+    #set($entCtrl = ${control})
+    #set($entCtrlId = ${control.getEncodedID()})
+    
+    <ul id="instanceTabs-$entCtrlId" class="instanceTabs">
+    #foreach( $instCtrl in $collectControls )
+        #if( $instCtrl.getControlType() == "EntityInstanceControlGroup")
+        <li>
+            <a id="tab$velocityCount" onclick="setActiveInstance(this, '$entCtrlId');return false;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$velocityCount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        #end
+    #end
+    </ul>
+    <div style="clear:both"></div>
+    <div id="instanceViews-$entCtrlId" class="instanceViews">
+        #foreach( $instCtrl in $collectControls )
+            #if($instCtrl.getControlType() == "EntityInstanceControlGroup")
+                #set( $entInstCollectControls = ${instCtrl.getControls()} )
+                #setEntInstClass($velocityCount)
+                <div id="viewtab$velocityCount" class="entity-instance-group ${entInstClass}">
+                    #foreach( $control in $entInstCollectControls )
+                        #if( $control.getControlType() == "ButtonGroup")
+                            <div class="entity-instance-widget" role="gridcell">
+                                #parse( "controls/ButtonGroup.vm" )
+                            </div>
+                        #end
+                    #end
+                    #foreach( $control in $entInstCollectControls )
+                        #if( $control.getControlType() != "ButtonGroup" && !$control.isAlwaysHidden())
+                            #if(!${control.isVisible()})
+                                #set($displayStyle = "display: none" )
+                            #else
+                                #set($displayStyle = "")
+                            #end
+        
+                            #if(${control.isInstanceGroupControl()})
+                                #set($class = "control-item nested-eic")
+                            #else
+                                #set($class = "control-item")
+                            #end
+        
+                            <div class="${class}" id="cd-${control.getEncodedID()}" style="$displayStyle">
+                                #parseCtrlVm(${control})
+                            </div>
+                        #end
+                    #end
+                    #if(${instCtrl.getInstanceFieldName()})
+                        <input type="hidden" name=${instCtrl.getInstanceFieldName()} value="${instCtrl.getEntityInstanceName()}" />
+                    #end
+                </div>
+            #else
+                <div class="control-item">
+                    #set($control = ${instCtrl})
+                    #parseCtrlVm(${control})
+                </div>
+            #end
+        #end
+    </div>
+    
+    #if($addControl)
+        <div class="control-item">
+            #set($control = $addControl)
+            #parseCtrlVm($control)
+        </div>
+    #end
+#else
+    #set($collectControls = ${control.getControls()} )
+    #set($entCtrl = ${control})
+    #set($entCtrlId = ${control.getEncodedID()})
+    
+    <ul id="instanceTabs-$entCtrlId" class="instanceTabs">
+    #foreach( $instCtrl in $collectControls )
+        #if( $instCtrl.getControlType() == "EntityInstanceControlGroup")
+        <li>
+            <a id="tab$velocityCount" onclick="setActiveInstance(this, '$entCtrlId');return false;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$velocityCount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        #end
+    #end
+    </ul>
+    <div style="clear:both"></div>
+    <div id="instanceViews-$entCtrlId" class="instanceViews">
+        #foreach( $instCtrl in $collectControls )
+            #if($instCtrl.getControlType() == "EntityInstanceControlGroup")
+                #set( $entInstCollectControls = ${instCtrl.getControls()} )
+                #setEntInstClass($velocityCount)
+                <div id="viewtab$velocityCount" class="entity-instance-group ${entInstClass}">
+                    #foreach( $control in $entInstCollectControls )
+                        #if( $control.getControlType() == "ButtonGroup")
+                            <div class="entity-instance-widget" role="gridcell">
+                                #parse( "controls/ButtonGroup.vm" )
+                            </div>
+                        #end
+                    #end
+                    #foreach( $control in $entInstCollectControls )
+                        #if( $control.getControlType() != "ButtonGroup" && !$control.isAlwaysHidden())
+                            #if(!${control.isVisible()})
+                                #set($displayStyle = "display: none" )
+                            #else
+                                #set($displayStyle = "")
+                            #end
+        
+                            #if(${control.isInstanceGroupControl()})
+                                #set($class = "control-item nested-eic")
+                            #else
+                                #set($class = "control-item")
+                            #end
+        
+                            <div class="${class}" id="cd-${control.getEncodedID()}" style="$displayStyle">
+                                #parseCtrlVm(${control})
+                            </div>
+                        #end
+                    #end
+                    #if(${instCtrl.getInstanceFieldName()})
+                        <input type="hidden" name=${instCtrl.getInstanceFieldName()} value="${instCtrl.getEntityInstanceName()}" />
+                    #end
+                </div>
+            #else
+                <div class="control-item">
+                    #set($control = ${instCtrl})
+                    #parseCtrlVm(${control})
+                </div>
+            #end
+        #end
+    </div>
+ #end   

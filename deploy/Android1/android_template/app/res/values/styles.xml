@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014, 2017, Oracle and/or its affiliates. All rights reserved. -->
+<resources>
+    <style name="Theme.MAF.base" parent="@android:style/Theme.Holo">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.MAF" parent="@style/Theme.MAF.base">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+</resources>

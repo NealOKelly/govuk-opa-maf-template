@@ -1,0 +1,17 @@
+#set($index = 0)
+#foreach($error in $errors)
+    #set($index = $index + 1)
+    <h1 class="system-error">${error.getLocalisedMessage()}</h1>
+    ##render stack trace if debugging is true
+    #if(${debug} == "true")
+        <div class="error-details">
+            <div class="show-hide" id="show-hide-${index}">${error-details}</div>
+            <div class="stack-trace" id="stack-trace-${index}">
+                #foreach($ex in ${error.getAllExceptions()})
+                        <div class="ex-msg">${ex.getMessage()}</div>
+                        <div class="trace"><code>${ex.getStackTrace()}</code></div>
+                #end
+            </div>
+        </div>
+    #end
+#end

@@ -1,0 +1,14 @@
+{
+  "pagedir-right-to-left": false,
+  "SessionResumeError": "Oops. I tried to resume, but something went wrong.",
+  "LocaleNotSupportedError": "Policy model \"${e.getRulebaseIdentifier()}\" does not support locale: \"${e.getLocale()}\"",
+  "InvalidRequestError": "This request is invalid.",
+  "NoActiveSessionError": "This interview session has expired.<br/><br/>Click <a href=\"${e.startSessionLink()}\">here</a> to start a new interview.",
+  "GenericErrorMessage": "An error occurred trying to process your request.<br/>For further assistance please contact support.",
+  "RenderScreenError": "An error occurred attempting to render this screen.",
+  "CookiesDisabledError": "Policy Automation has detected that cookies are not enabled for this site which will prevent this application from running. Please enable cookies and try again.",
+  "RulebaseNotFoundException": "This request is invalid.",
+  "AuthenticationError": "Access denied.",
+  "FourOhFourError": "404 Not Found.",
+  "error-details": "Click to Show/Hide error details."
+}

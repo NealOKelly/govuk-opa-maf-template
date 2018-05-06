@@ -1,0 +1,9 @@
+#if( ${control.isEnabled()} )
+    #if(${newWindow} == "true")
+        <a target="_blank" href="${control.getURL()}" id="${control.getEncodedID()}" ${styleAttribute}>${control.getText()}</a>
+    #else
+        <a href="${control.getURL()}" id="${control.getEncodedID()}" ${styleAttribute}>${control.getText()}</a>
+    #end
+#else
+    ${control.getText()}
+#end

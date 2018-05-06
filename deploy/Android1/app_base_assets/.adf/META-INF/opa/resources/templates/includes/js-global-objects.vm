@@ -1,0 +1,9 @@
+## This file is for java script variables that are constructed by velocity templates. These objects are guaranteed to appear on every screen
+
+##object for page fade in/out
+var fadeAnimation = {
+    fadeInDuration: ${fade-in-duration},
+    fadeOutDuration: ${fade-out-duration}
+
+};
+

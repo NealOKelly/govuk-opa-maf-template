@@ -1,0 +1,284 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+// Only add the support multidex library if the minSdkVersion is less than API 21.
+// Android versions API 21+ support multidex natively.
+def needsMultiDexLib = (true && 19 < 21)
+
+// Read in any properties that are securely sent from the command-line.
+if (project.hasProperty('maf_secure_props')) {
+    def secureProps = maf_secure_props.split(',')
+
+    def lines = System.in.readLines()
+
+    if (secureProps.size() != lines.size()) {
+        throw new GradleException("Input defined ${secureProps.size()} properties, but received ${lines.size()}.")
+    }
+    def index = 0
+    for (prop in secureProps) {
+        project.ext[prop] = lines[index++]
+    }
+}
+
+if (!project.hasProperty('maf_asset_packaging')) {
+    project.ext['maf_asset_packaging'] = 'rt'
+} else {
+    def packaging = project.ext.maf_asset_packaging
+
+    if (packaging != 'rt' && packaging != 'none') {
+        throw new GradleException("Invalid packaging type defined: $packaging.")
+    }
+}
+
+if (!project.hasProperty('maf_cpu_list')) {
+    project.ext['maf_cpu_list'] = 'all'
+}
+
+project.ext.maf_cpu_list = project.ext.maf_cpu_list.split(',').collect { it }
+project.ext['maf_cpu_arm_enabled'] = project.ext.maf_cpu_list.contains('all') || project.ext.maf_cpu_list.contains('arm')
+project.ext['maf_cpu_x86_enabled'] = project.ext.maf_cpu_list.contains('all') || project.ext.maf_cpu_list.contains('x86')
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+    
+    defaultConfig {
+        applicationId "com.govuk.mobile.opa"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName ""
+        multiDexEnabled true
+
+        buildConfigField "boolean", "MULTI_DEX", "true"
+        buildConfigField "boolean", "STRICT_MODE", "false"
+        
+        ndk {
+            abiFilters = ['']
+            if (maf_cpu_arm_enabled) {
+                abiFilters += 'armeabi'
+            }
+
+            if (maf_cpu_x86_enabled) {
+                abiFilters += 'x86'
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        maf {
+            def requiredProperties = ['maf_key_store_file', 'maf_key_store_password', 'maf_key_alias', 'maf_key_password']
+            def unsetProperties = []
+            for (prop in requiredProperties) {
+                if (!project.hasProperty(prop)) {
+                    unsetProperties += prop
+                }
+            }
+
+            if (unsetProperties.size > 0) {
+                throw new GradleException("Project must define the following properties: $unsetProperties")
+            }
+
+            storeFile file(maf_key_store_file)
+            storePassword maf_key_store_password
+            keyAlias maf_key_alias
+            keyPassword maf_key_password
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        all {
+            signingConfig signingConfigs.maf
+            minifyEnabled false
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src'];
+            resources.srcDirs = ['src', 'java_res', 'build/generated/java_res/maf_assets']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['jniLibs']
+
+            if (needsMultiDexLib) {
+                java.srcDirs += 'multidex/support'
+            } else {
+                java.srcDirs += 'multidex/none'
+            }
+
+            if (maf_asset_packaging == 'rt') {
+                assets.srcDirs += '../rt_base'
+            }
+
+            res.srcDirs += 'C:/Users/nealo/OneDrive/Development/git-repos/laa/govuk_opa_maf_template/deploy/Android1/app_android_resources'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    aaptOptions {
+        noCompress '.jar'
+    }
+}
+
+ext {
+    cdvCompileSdkVersion = android.compileSdkVersion
+    cdvBuildToolsVersion = android.buildToolsVersion
+    cdvVersionCode = Integer.parseInt('' + android.defaultConfig.versionCode)
+    cdvMinSdkVersion = "${android.defaultConfig.versionCode}"
+    cdvBuildMultipleApks = false
+    mafCompileContainerProject = true
+}
+
+dependencies {
+    if (needsMultiDexLib) {
+        implementation "com.android.support:multidex:$multiDex_version"
+    }
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:support-fragment:$supportLib_version"
+    implementation "com.android.support:support-v4:$supportLib_version"
+
+    // apply Cordova first, so the plugins have access to any helpers that Cordova provides
+    apply from: 'cordova/cordova.gradle'
+
+    // Cordova allows plugins to create/modify a build-extras.gradle file, so apply it now if it exists
+    File buildExtrasFile = new File(projectDir, 'build-extras.gradle')
+    if (buildExtrasFile.exists()) {
+        apply from: buildExtrasFile
+    }
+
+    Properties props = new Properties()
+    File propsFile = new File(projectDir, 'project.properties')
+    if (propsFile.exists()) {
+        props.load(propsFile.newDataInputStream())
+        for (key in props.keys()) {
+            // apply any additional Cordova plug-in projects
+            if (key.startsWith('cordova.gradle.include.')) {
+                def value = props.get(key)
+                println 'Applying Cordova gradle plugin from \'' + value + '\''
+                apply from: value
+            }
+            // compile any additional Cordova plug-in framework dependencies
+            if (key.startsWith('cordova.system.library.')) {
+                def value = props.get(key)
+                // Allow for replacing the $supportLib_version variable.
+                value = value.replace('$supportLib_version', "$supportLib_version")
+                println 'Compiling Cordova plugin gradle library \'' + value + '\''
+                implementation value
+            }
+        }
+    }
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    if (mafCompileContainerProject) {
+        implementation project(':Container')
+    }
+    implementation project(':Cordova')
+    implementation project(':IDMMobileSDK')
+
+}
+
+task makeAssetsZip(type: Zip) {
+    duplicatesStrategy 'exclude'
+    destinationDir new File(projectDir, 'build/generated/java_res/maf_assets')
+    archiveName 'assets.zip'
+    into('/') {
+        from '../java_res_base/assets'
+    }
+    into('/') {
+        from 'assets'
+    }
+    into ('/') {
+        from zipTree('../java_res_base/assets.zip')
+    }
+    into ('/') {
+        from zipTree('C:/Oracle/JDeveloper/Oracle_Home/jdeveloper/jdev/extensions/oracle.maf/javascript/ADFmf_AmxJavascript_release.zip')
+    }
+    into ('/') {
+        from zipTree('C:/Oracle/JDeveloper/Oracle_Home/jdeveloper/jdev/extensions/oracle.maf/javascript/Android/ADFmf_AmxJavascript_release_Android.zip')
+    }
+    into ('/') {
+        from ('C:/Users/nealo/OneDrive/Development/git-repos/laa/govuk_opa_maf_template/deploy/Android1/app_base_assets')
+    }
+}
+
+task makeJvmlibsZip(type: Zip) {
+    duplicatesStrategy 'exclude'
+    destinationDir new File(projectDir, 'build/generated/java_res/maf_assets')
+    archiveName 'jvmlibs.zip'
+    into('/') {
+        from zipTree('../java_res_base/jvmlibs.zip')
+    }
+
+    if (maf_cpu_arm_enabled) {
+        into('/') {
+            from zipTree('../java_res_base/jvmlibs_arm.zip')
+        }
+    }
+    if (maf_cpu_x86_enabled) {
+        into('/') {
+            from zipTree('../java_res_base/jvmlibs_x86.zip')
+        }
+    }
+
+    if (maf_asset_packaging == 'none') {
+        into('/') {
+            from '../rt_base/storage/jvm'
+        }
+    }
+    into('/user') {
+        from '../java_res_base/user'
+    }
+    into('/security') {
+        from '../java_res_base/security'
+    }
+}
+
+afterEvaluate {
+    preBuild.dependsOn(makeAssetsZip)
+    preBuild.dependsOn(makeJvmlibsZip)
+
+    // if maf_output_apk has been specified, then add some tasks to copy/rename and delete the file as necessary
+    if (project.hasProperty('maf_output_apk')) {
+        File file = new File(maf_output_apk)
+        def outputParentDir = file.getParent()
+        def outputFileName = file.getName()
+
+        android.buildTypes.all { buildType ->
+            task "${buildType.name}CopyFinalApk"() {
+                doLast {
+                    copy {
+                        from("build/outputs/apk/${buildType.name}") {
+                            include "app-${buildType.name}.apk"
+                            rename("app-${buildType.name}.apk", outputFileName)
+                        }
+                        into outputParentDir
+                    }
+                }
+            }
+
+            tasks.getByPath(":${project.name}:assemble${buildType.name.capitalize()}").finalizedBy("${buildType.name}CopyFinalApk")
+        }
+
+        task deleteFinalApk {
+            doLast {
+                delete maf_output_apk
+            }
+        }
+        clean.finalizedBy(deleteFinalApk)
+    }
+}

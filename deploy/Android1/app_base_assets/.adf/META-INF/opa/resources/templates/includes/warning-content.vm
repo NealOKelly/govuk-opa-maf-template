@@ -1,0 +1,11 @@
+<h2>${title}</h2>
+
+<div id="messages" class="messages">
+    #foreach($warning in $warnings)
+            <p class="warning">${warning.value}</p>
+    #end
+</div>
+
+<form id="owdInterviewForm" name="form" accept-charset="UTF-8" method="GET" action="${post-uri}">
+	<button class="submit" id="submit" name="submit" type="submit" value="Continue to interview">Continue to interview</button>
+</form>
