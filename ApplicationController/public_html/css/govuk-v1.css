@@ -26,6 +26,22 @@
     font-weight: bold;
 }
 
+a, .amx-goLink, .amx-commandLink {
+    color: #005ea5;
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+a:active, .amx-goLink:active, .amx-commandLink:active {
+    outline: none;
+}
+
+.amx-goLink:active, .amx-commandLink:active {
+    background-color: #D4D4D6;
+    border-radius: 2px;
+    text-decoration: underline;
+}
+
 #bodyPage {
     background-color: white;
 }
@@ -71,9 +87,32 @@ amx-panelLabelAndMessage {
     background-color: #0b0c0c;
 }
 
+/* #### LOADING ANIMATION ###*/
+@-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+}
+
+/* Suppress fade-in */
+.amx-loading.hiding {
+  opacity: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+/* Suppress ease-in-out */
+.amx-loading.showing {
+  animation-name: none;
+  -webkit-animation-name: none;
+
+}
 .amx-loading {
     background-image: none;
-    position: fixed;
+    margin: auto;
     border: 12px solid #DEE0E2;
     border-radius: 50%;
     border-top-color: #005EA5;
@@ -81,11 +120,10 @@ amx-panelLabelAndMessage {
     height: 80px;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
-    /*margin:100px;*/
-
     display: inline-block;
-    z-index: 10000;
+    z-index: 99999;
 }
+
 /* #### FOOTER ###*/
 .amx-panelPage-footer {
     height: 125px;
@@ -114,7 +152,6 @@ amx-panelLabelAndMessage {
     position: absolute;
     right: 0;
 }*/
-
 .amx-panelPage-facet-footer > .amx-outputText {
     color: #0b0c0c;
     font-size: medium;
