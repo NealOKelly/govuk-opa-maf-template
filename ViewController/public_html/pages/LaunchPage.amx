@@ -4,12 +4,14 @@
     <amx:panelPage id="pp1">
         <amx:facet name="header">
             <amx:image id="crown-logo" source="/images/gov.uk_logotype_crown.png"/>
-            <amx:outputText id="logo-text" value="GOV.UK" styleClass="govuk-logo-text"/>
+            <amx:outputText id="header" value="GOV.UK" styleClass="govuk-logo-text"/>
         </amx:facet>
         <amx:commandButton text="Launch Interview" id="cb1" action="startInterview"
                            actionListener="#{integrationBean.handleLaunchInterview}"/>
         <amx:facet name="footer">
-            <amx:outputText id="footer" value="Sample page name" inlineStyle="font-size:large;"/>
+            <amx:image id="ogl-logo" source="/images/OGL.png"/>
+            <amx:outputText id="footer" value="© Crown Copyright"/>
+            <amx:image id="hmg-logo" source="/images/HMGArms125px.png"/>
         </amx:facet>
     </amx:panelPage>
 </amx:view>

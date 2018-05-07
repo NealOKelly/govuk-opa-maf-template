@@ -19,7 +19,9 @@
         <amx:outputHtml id="interviewContent" styleClass="interviewContent" security="none"
                         value="#{applicationScope.august2016InterviewMode ? applicationScope.august2016Interview.html : applicationScope.interview.html}"/>
         <amx:facet name="footer">
-            <amx:outputText id="footer" value="Sample page name" inlineStyle="font-size:large;"/>
+            <amx:image id="ogl-logo" source="/images/OGL.png"/>
+            <amx:outputText id="footer" value="© Crown Copyright"/>
+            <amx:image id="hmg-logo" source="/images/HMGArms125px.png"/>
         </amx:facet>
     </amx:panelPage>
     <amx:popup id="popupMenu" animation="pop" autoDismiss="true" backgroundDimming="off" inlineStyle="min-width:200px;">

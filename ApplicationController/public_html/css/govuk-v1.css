@@ -37,14 +37,17 @@
 amx-panelLabelAndMessage {
     font-family: nta, Arial, Helvetica, sans-serif;
 }
-
-.amx-outputText.govuk-logo-text {
-    font-size: 36pt;
-    margin-left: -20px;
+/* #### HEADER ###*/
+.amx-panelPage-header {
+    height: 84px;
+    padding-top: 10px;
+    border-top: 1px solid #F1F1F1;
+    border-bottom: 10px solid #005ea5;
 }
-
-.amx-panelPage-facet-secondary {
+/* Header background color */
+.amx-panelPage-facet-header {
     background-color: #0b0c0c;
+    border: none;
 }
 
 .amx-image#crown-logo {
@@ -52,16 +55,20 @@ amx-panelLabelAndMessage {
     width: 48px;
 }
 
-.amx-panelPage-header {
-    height: 84px;
+.amx-outputText.govuk-logo-text {
+    font-size: 36pt;
+    margin-left: -20px;
+}
+/* Header font style */
+.amx-panelPage-facet-header > .amx-outputText {
+    color: white;
+    font-weight: bold;
+    font-family: nta, Arial, Helvetica, sans-serif;
     padding-top: 10px;
-    border-top: 1px solid #F1F1F1;
-    border-bottom: 10px solid #005ea5;
 }
 
-.amx-panelPage-footer {
-    height: 159px;
-    border-top: 10px solid #005ea5;
+.amx-panelPage-facet-secondary {
+    background-color: #0b0c0c;
 }
 
 .amx-loading {
@@ -79,27 +86,37 @@ amx-panelLabelAndMessage {
     display: inline-block;
     z-index: 10000;
 }
-/* Header background color */
-.amx-panelPage-facet-header {
-    background-color: #0b0c0c;
-    border: none;
-}
-/* Header font style */
-.amx-panelPage-facet-header > .amx-outputText {
-    color: white;
-    font-weight: bold;
-    font-family: nta, Arial, Helvetica, sans-serif;
-    padding-top: 10px;
+/* #### FOOTER ###*/
+.amx-panelPage-footer {
+    height: 125px;
+    border-top: 10px solid #005ea5;
 }
 
 .amx-panelPage-facet-footer {
     background-color: #dee0e2;
     border: none;
 }
+/*
+.amx-image#ogl-logo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 10px;
+}
 
 .amx-panelPage-facet-footer > .amx-outputText {
     color: #0b0c0c;
-    font-weight: bold;
-    font-size: large;
+    font-size: medium;
+    font-family: nta, Arial, Helvetica, sans-serif;
+}
+
+.amx-image#hmg-logo {
+    position: absolute;
+    right: 0;
+}*/
+
+.amx-panelPage-facet-footer > .amx-outputText {
+    color: #0b0c0c;
+    font-size: medium;
     font-family: nta, Arial, Helvetica, sans-serif;
 }
