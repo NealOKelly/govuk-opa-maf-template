@@ -9,4 +9,7 @@
   <adfmf:navigation>
     <adfmf:navigationBar enabled="false"/>
   </adfmf:navigation>
+  <adfmf:configuration>
+    <adfmf:launchScreen/>
+  </adfmf:configuration>
 </adfmf:application>
